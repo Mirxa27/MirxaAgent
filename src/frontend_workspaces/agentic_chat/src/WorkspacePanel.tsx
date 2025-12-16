@@ -199,7 +199,7 @@ export function WorkspacePanel({ isOpen, onToggle, highlightedFile }: WorkspaceP
         const formData = new FormData();
         formData.append('file', file);
 
-        // Upload to cuga_workspace directory
+        // Upload to mirxa_workspace directory
         const response = await fetch('/api/workspace/upload', {
           method: 'POST',
           body: formData,
@@ -302,7 +302,7 @@ export function WorkspacePanel({ isOpen, onToggle, highlightedFile }: WorkspaceP
             >
               <Info size={16} className="info-icon" />
               <div className="workspace-info-tooltip">
-                This is the CUGA workspace. Tag files directly from your working directory using <code>@</code>
+                This is the MirxaAgent workspace. Tag files directly from your working directory using <code>@</code>
               </div>
             </div>
           </div>

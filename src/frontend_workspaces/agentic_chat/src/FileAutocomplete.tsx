@@ -391,11 +391,11 @@ export function FileAutocomplete({ onFileSelect, onAutocompleteOpen, onFileHover
 
   const useMockData = () => {
     const mockFiles = [
-      { name: 'top_opportunities_arkansas.txt', path: 'cuga_workspace/top_opportunities_arkansas.txt' },
-      { name: 'top_10_opportunities_arkansas.txt', path: 'cuga_workspace/top_10_opportunities_arkansas.txt' },
-      { name: 'top_3_opportunities_arkansas.txt', path: 'cuga_workspace/top_3_opportunities_arkansas.txt' },
-      { name: 'analysis_report.md', path: 'cuga_workspace/analysis_report.md' },
-      { name: 'data_export.json', path: 'cuga_workspace/data_export.json' },
+      { name: 'top_opportunities_arkansas.txt', path: 'mirxa_workspace/top_opportunities_arkansas.txt' },
+      { name: 'top_10_opportunities_arkansas.txt', path: 'mirxa_workspace/top_10_opportunities_arkansas.txt' },
+      { name: 'top_3_opportunities_arkansas.txt', path: 'mirxa_workspace/top_3_opportunities_arkansas.txt' },
+      { name: 'analysis_report.md', path: 'mirxa_workspace/analysis_report.md' },
+      { name: 'data_export.json', path: 'mirxa_workspace/data_export.json' },
     ];
     usedMockRef.current = true;
     setAllFiles(mockFiles);

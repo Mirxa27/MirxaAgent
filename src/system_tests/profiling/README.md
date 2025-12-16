@@ -1,6 +1,6 @@
-# CUGA Profiling
+# MirxaAgent Profiling
 
-This directory contains tools for profiling CUGA digital sales tasks with different configurations and models, extracting performance metrics and LLM call information from Langfuse.
+This directory contains tools for profiling MirxaAgent digital sales tasks with different configurations and models, extracting performance metrics and LLM call information from Langfuse.
 
 ## Directory Structure
 
@@ -111,7 +111,7 @@ experiment:
 #### Profiling Section
 
 - `configs`: List of configuration files to test (e.g., `settings.openai.toml`)
-- `modes`: List of CUGA modes (`fast`, `balanced`, `accurate`)
+- `modes`: List of MirxaAgent modes (`fast`, `balanced`, `accurate`)
 - `tasks`: List of test tasks to run
 - `runs`: Number of iterations per configuration
 - `output`: Output directory and filename settings

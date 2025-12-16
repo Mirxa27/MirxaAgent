@@ -1,22 +1,22 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="/docs/images/cuga-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="/docs/images/cuga-light.png">
-  <img alt="CUGA" src="/docs/images/cuga-dark.png">
+  <img alt="MirxaAgent" src="/docs/images/cuga-dark.png">
 </picture>
 
 <div align="center">
 
-# CUGA: The Configurable Generalist Agent
+# MirxaAgent: The Configurable Generalist Agent
 
 ### Start with a generalist. Customize for your domain. Deploy faster!
 
-Building a domain-specific enterprise agent from scratch is complex and requires significant effort: agent and tool orchestration, planning logic, safety and alignment policies, evaluation for performance/cost tradeoffs and ongoing improvements. CUGA is a state-of-the-art generalist agent designed with enterprise needs in mind, so you can focus on configuring your domain tools, policies and workflow.
+Building a domain-specific enterprise agent from scratch is complex and requires significant effort: agent and tool orchestration, planning logic, safety and alignment policies, evaluation for performance/cost tradeoffs and ongoing improvements. MirxaAgent is a state-of-the-art generalist agent designed with enterprise needs in mind, so you can focus on configuring your domain tools, policies and workflow.
 
 ---
 
 [![Python](https://shields.io/badge/Python-3.12-blue?logo=python&style=for-the-badge)](https://www.python.org/)
 [![Status](https://shields.io/badge/Status-Active-success?logo=checkmarx&style=for-the-badge)]()
-[![Documentation](https://shields.io/badge/Documentation-Available-blue?logo=gitbook&style=for-the-badge)](https://docs.cuga.dev)
+[![Documentation](https://shields.io/badge/Documentation-Available-blue?logo=gitbook&style=for-the-badge)](https://docs.github.com/Mirxa27)
 [![Discord](https://shields.io/badge/Discord-Join-blue?logo=discord&style=for-the-badge)](https://discord.gg/aH6rAEEW)
 
 [![AppWorld](https://img.shields.io/badge/%F0%9F%A5%87%20%231%20on-AppWorld-gold?style=for-the-badge)](https://appworld.dev/leaderboard)
@@ -25,11 +25,11 @@ Building a domain-specific enterprise agent from scratch is complex and requires
 </div>
 
 
-## Why CUGA?
+## Why MirxaAgent?
 
 ### 🏆 Benchmark Performance
 
-CUGA achieves state-of-the-art performance on leading benchmarks:
+MirxaAgent achieves state-of-the-art performance on leading benchmarks:
 
 - 🥇 **#1 on [AppWorld](https://appworld.dev/leaderboard)** — a benchmark with 750 real-world tasks across 457 APIs
 - 🥈 **Top-tier on [WebArena](https://docs.google.com/spreadsheets/d/1M801lEpBbKSNwP-vDBkC_pF7LdyGU1f_ufZb_NWNBZQ/edit?gid=0#gid=0)** (#1 from 02/25 - 09/25) — a complex benchmark for autonomous web agents across application domains
@@ -44,7 +44,7 @@ CUGA achieves state-of-the-art performance on leading benchmarks:
 
 - **Integrates with Langflow** — Low-code visual build experience for designing and deploying agent workflows without extensive coding
 
-- **Open-source and composable** — Built with modularity in mind, CUGA itself can be exposed as a tool to other agents, enabling nested reasoning and multi-agent collaboration. Evolving toward enterprise-grade reliability
+- **Open-source and composable** — Built with modularity in mind, MirxaAgent itself can be exposed as a tool to other agents, enabling nested reasoning and multi-agent collaboration. Evolving toward enterprise-grade reliability
 
 - **Configurable policy and human-in-the-loop instructions** _(Experimental)_ — Configure policy-aware instructions and approval gates to improve alignment and ensure safe agent behavior in enterprise contexts
 
@@ -53,11 +53,11 @@ CUGA achieves state-of-the-art performance on leading benchmarks:
 Explore the [Roadmap](#roadmap) to see what's ahead, or join the [🤝 Call for the Community](#call-for-the-community) to get involved.
 
 
-## 🎬 CUGA in Action
+## 🎬 MirxaAgent in Action
 
 ### Hybrid Task Execution
 
-Watch CUGA seamlessly combine web and API operations in a single workflow:
+Watch MirxaAgent seamlessly combine web and API operations in a single workflow:
 
 **Example Task:** `get top account by revenue from digital sales, then add it to current page`
 
@@ -66,7 +66,7 @@ https://github.com/user-attachments/assets/0cef8264-8d50-46d9-871a-ab3cefe1dde5
 <details>
 <summary><b>Would you like to test this? (Advanced Demo)</b></summary>
 
-Experience CUGA's hybrid capabilities by combining API calls with web interactions:
+Experience MirxaAgent's hybrid capabilities by combining API calls with web interactions:
 
 ### Setup Steps:
 
@@ -95,8 +95,8 @@ Experience CUGA's hybrid capabilities by combining API calls with web interactio
 4. **Enable the browser extension:**
 
    - Click the extension puzzle icon in your browser
-   - Toggle the CUGA extension to activate it
-   - This will open the CUGA side panel
+   - Toggle the MirxaAgent extension to activate it
+   - This will open the MirxaAgent side panel
 
 5. **Open the test application:**
 
@@ -107,13 +107,13 @@ Experience CUGA's hybrid capabilities by combining API calls with web interactio
    get top account by revenue from digital sales then add it to current page
    ```
 
-🎯 **What you'll see:** CUGA will fetch data from the Digital Sales API and then interact with the web page to add the account information directly to the current page - demonstrating seamless API-to-web workflow integration!
+🎯 **What you'll see:** MirxaAgent will fetch data from the Digital Sales API and then interact with the web page to add the account information directly to the current page - demonstrating seamless API-to-web workflow integration!
 
 </details>
 
 ### Human in the Loop Task Execution
 
-Watch CUGA pause for human approval during critical decision points:
+Watch MirxaAgent pause for human approval during critical decision points:
 
 **Example Task:** `get best accounts`
 
@@ -122,7 +122,7 @@ https://github.com/user-attachments/assets/d103c299-3280-495a-ba66-373e72554e78
 <details>
 <summary><b>Would you like to try this? (HITL Demo)</b></summary>
 
-Experience CUGA's Human-in-the-Loop capabilities where the agent pauses for human approval at key decision points:
+Experience MirxaAgent's Human-in-the-Loop capabilities where the agent pauses for human approval at key decision points:
 
 ### Setup Steps:
 
@@ -144,7 +144,7 @@ Experience CUGA's Human-in-the-Loop capabilities where the agent pauses for huma
    get best accounts
    ```
 
-🎯 **What you'll see:** CUGA will pause at critical decision points, showing you the planned actions and waiting for your approval before proceeding.
+🎯 **What you'll see:** MirxaAgent will pause at critical decision points, showing you the planned actions and waiting for your approval before proceeding.
 
 </details>
 
@@ -178,7 +178,7 @@ uv run digital_sales_openapi
 
 ```bash
 # In terminal, clone the repository and navigate into it
-git clone https://github.com/cuga-project/cuga-agent.git
+git clone https://github.com/Mirxa27/MirxaAgent.git
 cd cuga-agent
 
 # 1. Create and activate virtual environment
@@ -195,7 +195,7 @@ echo "OPENAI_API_KEY=your-openai-api-key-here" > .env
 cuga start demo
 
 # Chrome will open automatically at https://localhost:7860
-# then try sending your task to CUGA: 'get top account by revenue from digital sales'
+# then try sending your task to MirxaAgent: 'get top account by revenue from digital sales'
 
 # 5. View agent trajectories (optional)
 cuga viz
@@ -212,7 +212,7 @@ cuga viz
 
 Refer to: [`.env.example`](.env.example) for detailed examples.
 
-CUGA supports multiple LLM providers with flexible configuration options. You can configure models through TOML files or override specific settings using environment variables.
+MirxaAgent supports multiple LLM providers with flexible configuration options. You can configure models through TOML files or override specific settings using environment variables.
 
 ## Supported Platforms
 
@@ -292,7 +292,7 @@ CUGA supports multiple LLM providers with flexible configuration options. You ca
 
 ### Option 4: LiteLLM Support
 
-CUGA supports LiteLLM through the OpenAI configuration by overriding the base URL:
+MirxaAgent supports LiteLLM through the OpenAI configuration by overriding the base URL:
 
 1. Add to your `.env` file:
 
@@ -323,7 +323,7 @@ CUGA supports LiteLLM through the OpenAI configuration by overriding the base UR
 
 ## Configuration Files
 
-CUGA uses TOML configuration files located in `src/cuga/configurations/models/`:
+MirxaAgent uses TOML configuration files located in `src/cuga/configurations/models/`:
 
 - `settings.openai.toml` - OpenAI configuration (also supports LiteLLM via base URL override)
 - `settings.watsonx.toml` - WatsonX configuration
@@ -464,7 +464,7 @@ mode = 'api'  # 'api', 'web', or 'hybrid'
 
 ## How It Works
 
-Each `.md` file contains specialized instructions that are automatically integrated into the CUGA's internal prompts when that component is active. Simply edit the markdown files to customize behavior for each node type.
+Each `.md` file contains specialized instructions that are automatically integrated into the MirxaAgent's internal prompts when that component is active. Simply edit the markdown files to customize behavior for each node type.
 
 **Available instruction sets:** `answer`, `api_planner`, `code_agent`, `plan_controller`, `reflection`, `shortlister`, `task_decomposition`
 
@@ -501,7 +501,7 @@ instruction_set = "default"  # or any instruction set above
 1. Change `enable_memory = true` in `setting.toml`
 2. Run `cuga start memory`
 
-Watch CUGA with Memory enabled
+Watch MirxaAgent with Memory enabled
 
 [LINK]
 
@@ -512,7 +512,7 @@ Watch CUGA with Memory enabled
 1. set `enable_memory` flag to true
 2. Run `cuga start memory`
 3. Run `cuga start demo_crm --sample-memory-data` 
-4. go to the cuga webpage and type `Identify the common cities between my cuga_workspace/cities.txt and cuga_workspace/company.txt` . Here you should see the errors related to CodeAgent. Wait for a minute for `tips` to be generated. `Tips` generation can be confirmed from the  terminal where` cuga start memory` was run
+4. go to the cuga webpage and type `Identify the common cities between my mirxa_workspace/cities.txt and mirxa_workspace/company.txt` . Here you should see the errors related to CodeAgent. Wait for a minute for `tips` to be generated. `Tips` generation can be confirmed from the  terminal where` cuga start memory` was run
 5. Re-run the same utterance again and it should finish in lesser number of steps
 
 </details>
@@ -550,7 +550,7 @@ Watch CUGA with Memory enabled
 <details>
 <summary><b>🔧 Adding Tools: Comprehensive Examples</b></summary>
 
-CUGA supports three types of tool integrations. Each approach has its own use cases and benefits:
+MirxaAgent supports three types of tool integrations. Each approach has its own use cases and benefits:
 
 ## 📋 **Tool Types Overview**
 
@@ -564,7 +564,7 @@ CUGA supports three types of tool integrations. Each approach has its own use ca
 
 - **Tool Registry**: [./src/cuga/backend/tools_env/registry/README.md](./src/cuga/backend/tools_env/registry/README.md)
 - **Comprehensive example with different tools + MCP**: [./docs/examples/cuga_with_runtime_tools/README.md](Adding Tools)
-- **CUGA as MCP**: [./docs/examples/cuga_as_mcp/README.md](docs/examples/cuga_as_mcp)
+- **MirxaAgent as MCP**: [./docs/examples/cuga_as_mcp/README.md](docs/examples/cuga_as_mcp)
 
 </details>
 
@@ -601,20 +601,20 @@ Focused suites:
 
 ## 📊 Evaluation
 
-For information on how to evaluate, see the [CUGA Evaluation Documentation](src/cuga/evaluation/README.md)
+For information on how to evaluate, see the [MirxaAgent Evaluation Documentation](src/cuga/evaluation/README.md)
 
 ## 📚 Resources
 
 - 📖 [Example applications](./docs/examples)
-- 📧 Contact: [CUGA Team](https://forms.office.com/pages/responsepage.aspx?id=V3D2_MlQ1EqY8__KZK3Z6UtMUa14uFNMi1EyUFiZFGRUQklOQThLRjlYMFM2R1dYTk5GVTFMRzNZVi4u&route=shorturl)
+- 📧 Contact: [MirxaAgent Team](https://forms.office.com/pages/responsepage.aspx?id=V3D2_MlQ1EqY8__KZK3Z6UtMUa14uFNMi1EyUFiZFGRUQklOQThLRjlYMFM2R1dYTk5GVTFMRzNZVi4u&route=shorturl)
 
 
 ## Call for the Community
 
-CUGA is open source because we believe **trustworthy enterprise agents must be built together**.  
+MirxaAgent is open source because we believe **trustworthy enterprise agents must be built together**.  
 Here's how you can help:
 
-- **Share use cases** → Show us how you'd use CUGA in real workflows.
+- **Share use cases** → Show us how you'd use MirxaAgent in real workflows.
 - **Request features** → Suggest capabilities that would make it more useful.
 - **Report bugs** → Help improve stability by filing clear, reproducible reports.
 
@@ -633,8 +633,8 @@ Please follow the contribution guide in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
-[![Star History Chart](https://api.star-history.com/svg?repos=cuga-project/cuga-agent&type=Timeline)](https://star-history.com/#cuga-project/cuga-agent&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Mirxa27/MirxaAgent&type=Timeline)](https://star-history.com/#Mirxa27/MirxaAgent&Date)
 
 ## Contributors
 
-[![cuga agent contributors](https://contrib.rocks/image?repo=cuga-project/cuga-agent)](https://github.com/cuga-project/cuga-agent/graphs/contributors)
+[![cuga agent contributors](https://contrib.rocks/image?repo=Mirxa27/MirxaAgent)](https://github.com/Mirxa27/MirxaAgent/graphs/contributors)

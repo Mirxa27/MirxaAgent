@@ -229,7 +229,7 @@ export function LeftSidebar({
             >
               <HelpCircle size={14} className="sidebar-info-icon" />
               <div className="sidebar-tab-info-tooltip">
-                Variables are the results from task execution. Ask any question about the variables and CUGA will respond.
+                Variables are the results from task execution. Ask any question about the variables and MirxaAgent will respond.
               </div>
             </div>
           </button>

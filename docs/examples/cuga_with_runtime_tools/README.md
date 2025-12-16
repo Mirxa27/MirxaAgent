@@ -1,10 +1,10 @@
-# CUGA Tool Integration Examples
+# MirxaAgent Tool Integration Examples
 
-This directory demonstrates **three types of tool integrations** that CUGA supports, showcasing how to connect different tool types to create powerful AI agents.
+This directory demonstrates **three types of tool integrations** that MirxaAgent supports, showcasing how to connect different tool types to create powerful AI agents.
 
 ## 🎯 **Goal of This Example**
 
-This example shows how CUGA can seamlessly integrate multiple tool types in a single workflow. The `main.py` demonstrates a complex task that uses:
+This example shows how MirxaAgent can seamlessly integrate multiple tool types in a single workflow. The `main.py` demonstrates a complex task that uses:
 
 1. **OpenAPI Tools** - Access external REST APIs (Digital Sales)
 2. **MCP Tools** - File system operations via Model Context Protocol
@@ -12,18 +12,18 @@ This example shows how CUGA can seamlessly integrate multiple tool types in a si
 
 **Example Task**: *"Get top account by revenue from digital sales, send an email to the account owner, and save it to filesystem"*
 
-## 🔄 **Two Ways to Provide Tools to CUGA**
+## 🔄 **Two Ways to Provide Tools to MirxaAgent**
 
-CUGA supports two distinct approaches for tool integration, each suited for different use cases:
+MirxaAgent supports two distinct approaches for tool integration, each suited for different use cases:
 
 ### 1. **Registry-Based Tools** (Separate Process)
-Tools that run in the **MCP Registry**, a separate process triggered by CUGA:
+Tools that run in the **MCP Registry**, a separate process triggered by MirxaAgent:
 
 - **OpenAPI Tools** - REST APIs via OpenAPI specifications
 - **MCP Tools** - Model Context Protocol servers (stdio/http/sse)
 
 **When to Use:**
-- Shared tools across CUGA instances
+- Shared tools across MirxaAgent instances
 - Persistent external services/APIs
 - OpenAPI or MCP configuration in `mcp_servers.yaml`
 
@@ -31,14 +31,14 @@ Tools that run in the **MCP Registry**, a separate process triggered by CUGA:
 ```bash
 # Start registry as separate process
 uv run registry
-# CUGA connects to registry at runtime
+# MirxaAgent connects to registry at runtime
 ```
 
 ### 2. **Runtime LangChain Tools** (In-Process)
-LangChain tools passed directly to CUGA at runtime:
+LangChain tools passed directly to MirxaAgent at runtime:
 
 **When to Use:**
-- CUGA is a **component in another system** (embedded mode)
+- MirxaAgent is a **component in another system** (embedded mode)
 - Dynamic tools that change based on application state
 - Custom Python functions specific to your application
 - Rapid prototyping without registry configuration
@@ -49,11 +49,11 @@ LangChain tools passed directly to CUGA at runtime:
 from cuga.backend.cuga_graph.utils.controller import AgentRunner as CugaAgent
 from langchain_example_tool import tools as gmail_dummy_tools
 
-# Initialize CUGA agent
+# Initialize MirxaAgent agent
 cuga_agent = CugaAgent(browser_enabled=False)
 await cuga_agent.initialize_appworld_env()
 
-# Pass runtime tools directly to CUGA
+# Pass runtime tools directly to MirxaAgent
 tools = gmail_dummy_tools
 for tool in tools:
     tool.metadata = {'server_name': "gmail"}
@@ -63,7 +63,7 @@ tracker.set_tools(tools)
 task_result = await cuga_agent.run_task_generic(eval_mode=False, goal=task)
 ```
 
-**Key Advantage**: Ideal when CUGA is integrated into a larger system where you need to pass runtime tools without managing a separate registry process.
+**Key Advantage**: Ideal when MirxaAgent is integrated into a larger system where you need to pass runtime tools without managing a separate registry process.
 
 ## 🔧 **Three Types of Tools in `mcp_servers.yaml`**
 
@@ -87,7 +87,7 @@ MCP tools support **three transport types** following [FastMCP patterns](https:/
 mcpServers:
   filesystem:
     command: npx
-    args: ["-y", "@modelcontextprotocol/server-filesystem", "./cuga_workspace"]
+    args: ["-y", "@modelcontextprotocol/server-filesystem", "./mirxa_workspace"]
     transport: stdio  # Optional: auto-detected
     env:
       LOG_LEVEL: INFO
@@ -141,7 +141,7 @@ The main application demonstrates all three tool types working together:
 
 ```python
 # Task combines all three tool types
-task = "Get top account by revenue from my accounts in digital sales, then send an email to the account owner, and save it to to file in my filesystem under cuga_workspace/email_sent.md"
+task = "Get top account by revenue from my accounts in digital sales, then send an email to the account owner, and save it to to file in my filesystem under mirxa_workspace/email_sent.md"
 
 # 1. Uses Digital Sales API (OpenAPI) to get account data
 # 2. Uses Gmail tools (LangChain) to send email
@@ -217,14 +217,14 @@ docs/examples/cuga_with_runtime_tools/
 ├── langchain_example_tool.py  # LangChain Gmail tools (dummy data)
 ├── fast_mcp_example.py       # MCP server example
 ├── mcp_servers.yaml          # Configuration for OpenAPI & MCP tools
-├── cuga_workspace/           # Workspace for file operations
+├── mirxa_workspace/           # Workspace for file operations
 │   └── email_sent.md         # Example output file
 └── README.md                 # This file
 ```
 
 ## 🔍 **What Happens When You Run `main.py`**
 
-1. **Initialize CUGA Agent** with all three tool types
+1. **Initialize MirxaAgent** with all three tool types
 2. **Load OpenAPI tools** from Digital Sales API via MCP registry
 3. **Load MCP tools** for filesystem operations
 4. **Load LangChain tools** for Gmail operations (runtime)
@@ -240,7 +240,7 @@ docs/examples/cuga_with_runtime_tools/
 - **Reusability**: Tools can be used across different tasks
 - **Integration**: Seamless communication between tool types
 
-This example showcases CUGA's powerful ability to create unified AI workflows that span multiple systems and protocols.
+This example showcases MirxaAgent's powerful ability to create unified AI workflows that span multiple systems and protocols.
 
 ## 🚇 **MCP Transport Types Guide**
 

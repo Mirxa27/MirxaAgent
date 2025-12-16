@@ -14,8 +14,8 @@ class LoadTest(BaseTestServerStream):
 
     # Configure environment for API mode (no browser)
     test_env_vars = {
-        "CUGA_MODE": "api",
-        "CUGA_TEST_ENV": "true",
+        "MirxaAgent_MODE": "api",
+        "MirxaAgent_TEST_ENV": "true",
         "DYNACONF_ADVANCED_FEATURES__TRACKER_ENABLED": "false",
     }
 

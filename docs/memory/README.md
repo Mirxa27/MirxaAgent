@@ -1,10 +1,10 @@
-# Memory for CUGA
+# Memory for MirxaAgent
 
-This document explains how to enable the use of the memory feature in CUGA.
+This document explains how to enable the use of the memory feature in MirxaAgent.
 
 ## 🎯 Overview
 
-CUGA execution can be enhanced by enabling episodic memory, which introduces the ability to levearge previously identified insights and relevant experiences when generating the final answer.
+MirxaAgent execution can be enhanced by enabling episodic memory, which introduces the ability to levearge previously identified insights and relevant experiences when generating the final answer.
 Some key features include:
 
 ### 1. Agentic Memory Component
@@ -49,7 +49,7 @@ cuga/
 ```            
             
 ## 🔧 How It Works
-The use cases which motivate the need for memory for CUGA include:
+The use cases which motivate the need for memory for MirxaAgent include:
 1. Generate insights from successful/failed trajectories 
 - During execution,  `memory.add_step` captures  summary of step output and any relevant information
 - The Activity Tracker activates `memory.end_run` at the final step of the FinalAnswerAgent execution

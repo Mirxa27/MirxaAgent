@@ -14,7 +14,7 @@ class TestServerStreamBalancedMemory(BaseTestServerStream):
     """
 
     test_env_vars = {
-        "DYNACONF_FEATURES__CUGA_MODE": "balanced",
+        "DYNACONF_FEATURES__MirxaAgent_MODE": "balanced",
         "DYNACONF_ADVANCED_FEATURES__ENABLE_MEMORY": "true",
     }
     enable_memory_service = True

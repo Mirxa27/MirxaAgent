@@ -148,7 +148,7 @@ export class HttpStreamModule {
         if (!bid) {
             throw new Error("BID is required for click command");
         }
-        console.log(`[CUGA] Clicking element with BID: ${bid}, button: ${button}, modifiers: ${modifiers}`);
+        console.log(`[MirxaAgent] Clicking element with BID: ${bid}, button: ${button}, modifiers: ${modifiers}`);
         let nodeId = await this.findElementByDomTreeId(activeTab.id, bid);
         if (!nodeId) {
             throw new Error(`Element with BID '${bid}' not found`);
@@ -181,14 +181,14 @@ export class HttpStreamModule {
                             { nodeId: documentNode.root.nodeId, selector: `#${forValue}` }
                         );
                         if (queryRes && queryRes.nodeId) {
-                            console.log(`[CUGA] Redirecting click from <label> to associated element id '${forValue}', nodeId: ${queryRes.nodeId}`);
+                            console.log(`[MirxaAgent] Redirecting click from <label> to associated element id '${forValue}', nodeId: ${queryRes.nodeId}`);
                             nodeId = queryRes.nodeId;
                         }
                     }
                 }
             }
         } catch (labelErr) {
-            console.warn("[CUGA] Failed to resolve label target element:", labelErr);
+            console.warn("[MirxaAgent] Failed to resolve label target element:", labelErr);
         }
 
         const boxModel = await (globalThis as any).chrome.debugger.sendCommand(
@@ -207,7 +207,7 @@ export class HttpStreamModule {
         if (elementRect) {
             centerX = Math.round(elementRect.left + elementRect.width / 2);
             centerY = Math.round(elementRect.top + elementRect.height / 2);
-            console.log(`[CUGA] Bounding rect via content script, center: (${centerX}, ${centerY})`);
+            console.log(`[MirxaAgent] Bounding rect via content script, center: (${centerX}, ${centerY})`);
         }
 
         if (centerX === null || centerY === null) {
@@ -217,7 +217,7 @@ export class HttpStreamModule {
             const ys = [border[1], border[3], border[5], border[7]];
             centerX = Math.round((Math.min(...xs) + Math.max(...xs)) / 2);
             centerY = Math.round((Math.min(...ys) + Math.max(...ys)) / 2);
-            console.log(`[CUGA] Fallback BoxModel center: (${centerX}, ${centerY})`);
+            console.log(`[MirxaAgent] Fallback BoxModel center: (${centerX}, ${centerY})`);
         }
         await (globalThis as any).chrome.debugger.sendCommand(
             { tabId: activeTab.id },
@@ -242,7 +242,7 @@ export class HttpStreamModule {
                 clickCount: 1
             }
         );
-        console.log(`[CUGA] Click completed successfully`);
+        console.log(`[MirxaAgent] Click completed successfully`);
         return { success: true, position: { x: centerX, y: centerY } };
     }
 
@@ -258,7 +258,7 @@ export class HttpStreamModule {
         if (!value) {
             throw new Error("Value is required for type command");
         }
-        console.log(`[CUGA] Typing in element with BID: ${bid}, value: "${value}", press_enter: ${press_enter}`);
+        console.log(`[MirxaAgent] Typing in element with BID: ${bid}, value: "${value}", press_enter: ${press_enter}`);
         const nodeId = await this.findElementByDomTreeId(activeTab.id, bid);
         if (!nodeId) {
             throw new Error(`Element with BID '${bid}' not found`);
@@ -303,7 +303,7 @@ export class HttpStreamModule {
             await new Promise(resolve => setTimeout(resolve, 10));
         }
         if (press_enter) {
-            console.log(`[CUGA] Pressing Enter after typing`);
+            console.log(`[MirxaAgent] Pressing Enter after typing`);
             await (globalThis as any).chrome.debugger.sendCommand(
                 { tabId: activeTab.id },
                 "Input.dispatchKeyEvent",
@@ -325,7 +325,7 @@ export class HttpStreamModule {
                 }
             );
         }
-        console.log(`[CUGA] Type completed successfully`);
+        console.log(`[MirxaAgent] Type completed successfully`);
         return { success: true, value: value, press_enter: press_enter };
     }
 
@@ -665,7 +665,7 @@ export class HttpStreamModule {
 
     // --- Utility methods ---
     private async findElementByDomTreeId(tabId: number, bid: string): Promise<number | null> {
-        console.log(`[CUGA] Searching for element with BID: ${bid}`);
+        console.log(`[MirxaAgent] Searching for element with BID: ${bid}`);
         const document = await (globalThis as any).chrome.debugger.sendCommand(
             { tabId: tabId },
             "DOM.getDocument"
@@ -697,11 +697,11 @@ export class HttpStreamModule {
             }
         );
         if (!results.nodeIds || results.nodeIds.length === 0) {
-            console.log(`[CUGA] Element with BID '${bid}' not found`);
+            console.log(`[MirxaAgent] Element with BID '${bid}' not found`);
             return null;
         }
         const nodeId = results.nodeIds[0];
-        console.log(`[CUGA] Found element with BID '${bid}', nodeId: ${nodeId}`);
+        console.log(`[MirxaAgent] Found element with BID '${bid}', nodeId: ${nodeId}`);
         return nodeId;
     }
 
@@ -801,7 +801,7 @@ export class HttpStreamModule {
                 return response.data as { left: number; top: number; width: number; height: number };
             }
         } catch (err) {
-            console.warn("[CUGA] Failed to get element rect via content script:", err);
+            console.warn("[MirxaAgent] Failed to get element rect via content script:", err);
         }
         return null;
     }

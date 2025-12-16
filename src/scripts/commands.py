@@ -33,7 +33,7 @@ def run_api_registry_base(mode):
         os.environ["MCP_SERVERS_FILE"] = os.path.join(
             PACKAGE_ROOT, "backend/tools_env/registry/config/mcp_servers_appworld.yaml"
         )
-    host = os.environ.get("CUGA_HOST", "127.0.0.1")
+    host = os.environ.get("MirxaAgent_HOST", "127.0.0.1")
     server_module = os.path.join(PACKAGE_ROOT, "backend/tools_env/registry/registry/api_registry_server.py")
     subprocess.run(
         [
@@ -59,7 +59,7 @@ def run_api_registry_appworld():
 
 def run_demo():
     """Run the FastAPI server."""
-    host = os.environ.get("CUGA_HOST", "127.0.0.1")
+    host = os.environ.get("MirxaAgent_HOST", "127.0.0.1")
     server_module = "backend/server/main.py"
     subprocess.run(
         [
@@ -94,7 +94,7 @@ def run_digital_sales_mcp():
 
 def run_digital_sales_openapi():
     """Run the digital sales OpenAPI server."""
-    host = os.environ.get("CUGA_HOST", "127.0.0.1")
+    host = os.environ.get("MirxaAgent_HOST", "127.0.0.1")
     server_module = os.path.join(PACKAGE_ROOT, "..", "..", "docs/examples/digital_sales_openapi/main.py")
     subprocess.run(
         [

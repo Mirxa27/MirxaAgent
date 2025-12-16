@@ -1,10 +1,10 @@
-# CUGA Frontend Workspaces
+# MirxaAgent Frontend Workspaces
 
-Monorepo for the CUGA browser extension and frontend tooling, managed with **pnpm workspaces**. 
+Monorepo for the MirxaAgent browser extension and frontend tooling, managed with **pnpm workspaces**. 
 
 ## 📦 Workspace Packages
 
-- **`extension`**: Browser extension (Chrome/Edge/Firefox) that serves as the entry point to CUGA
+- **`extension`**: Browser extension (Chrome/Edge/Firefox) that serves as the entry point to MirxaAgent
 - **`runtime`**: DOM/content-script runtime used by the extension and libraries  
 - **`shared`** (`@uiagent/shared`): Shared TypeScript utilities and types consumed by other packages
 - **`agentic_chat`**: React-based frontend for the extension's side panel

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build script to create a standalone CUGA executable with embedded assets.
+Build script to create a standalone MirxaAgent executable with embedded assets.
 """
 
 import subprocess
@@ -111,7 +111,7 @@ exe = EXE(
 
 def main():
     """Main build process."""
-    print("🚀 Building standalone CUGA server...")
+    print("🚀 Building standalone MirxaAgent server...")
 
     try:
         # Step 1: Build assets

@@ -1,7 +1,7 @@
 [project]
-name = "cuga"
+name = "mirxaagent"
 version = "0.2.6"
-description = "CUGA is an open-source generalist agent for the enterprise, supporting complex task execution on web and APIs, OpenAPI/MCP integrations, composable architecture, reasoning modes, and policy-aware features."
+description = "MirxaAgent is an open-source generalist agent for the enterprise, supporting complex task execution on web and APIs, OpenAPI/MCP integrations, composable architecture, reasoning modes, and policy-aware features."
 readme = "README.md"
 license = "Apache-2.0"
 requires-python = ">=3.10, <3.14"
@@ -37,8 +37,8 @@ evaluation = ["rapidfuzz"]
 
 
 [project.urls]
-Homepage = "https://cuga.dev"
-Repository = "https://github.com/cuga-project/cuga-agent"
+Homepage = "https://github.com/Mirxa27"
+Repository = "https://github.com/Mirxa27/MirxaAgent"
 
 [tool.uv]
 package = true
@@ -81,7 +81,7 @@ eval_api = "scripts.commands:run_eval_api"
 appworld_eval = "evaluation.appworld_eval:run_main"
 appworld_setup = "scripts.commands:setup_appworld_environment"
 appworld_setup_docker = "scripts.commands:setup_appworld_environment_docker"
-cuga = "cuga.cli:app"
+mirxa = "cuga.cli:app"
 code = "evaluation.code_generator:main"
 exp = "scripts.eval_gui:main"
 digital_sales_mcp = "scripts.commands:run_digital_sales_mcp"

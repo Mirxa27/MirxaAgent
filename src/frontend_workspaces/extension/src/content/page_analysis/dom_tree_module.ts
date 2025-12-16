@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2024 Gregor Zunic
- * Modifications Copyright 2025 CUGA
+ * Modifications Copyright 2025 MirxaAgent
  * Licensed under the Apache License, Version 2.0
  * Original code licensed under MIT License
  */
@@ -272,7 +272,7 @@ export class DOMTreeModule implements Module {
       (window as any).DOMTreeAPI = globalAPI;
 
       // Also expose under a debug namespace for troubleshooting
-      (window as any).CUGA_DOMTreeAPI = globalAPI;
+      (window as any).MirxaAgent_DOMTreeAPI = globalAPI;
 
       // Log successful exposure
       console.log("✅ DOMTreeAPI exposed successfully", {

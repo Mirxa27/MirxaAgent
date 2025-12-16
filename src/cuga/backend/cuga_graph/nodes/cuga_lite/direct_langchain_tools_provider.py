@@ -19,7 +19,7 @@ class DirectLangChainToolsProvider(ToolProviderInterface):
     Tool provider for direct LangChain tools (in-process).
 
     This provider accepts LangChain tools directly at initialization time.
-    Useful when CUGA is embedded as a component in another system.
+    Useful when MirxaAgent is embedded as a component in another system.
 
     Example:
         ```python

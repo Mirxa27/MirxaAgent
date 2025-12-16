@@ -27,8 +27,8 @@ console = Console()
 os.environ["DYNACONF_ADVANCED_FEATURES__TRACKER_ENABLED"] = "true"
 
 app = typer.Typer(
-    help="Cuga CLI for managing services with direct execution",
-    short_help="Service management tool for Cuga components",
+    help="MirxaAgent CLI for managing services with direct execution",
+    short_help="Service management tool for MirxaAgent components",
 )
 
 if settings.advanced_features.enable_memory:
@@ -452,9 +452,9 @@ def callback(
     ),
 ):
     """
-    Cuga CLI: A management tool for Cuga services with direct execution.
+    MirxaAgent CLI: A management tool for MirxaAgent services with direct execution.
 
-    This tool helps you control various components of the Cuga ecosystem:
+    This tool helps you control various components of the MirxaAgent ecosystem:
 
     - demo: Both registry and demo agent (runs directly)
     - demo_crm: CRM demo with email MCP, mail sink, and CRM API (runs directly)
@@ -463,11 +463,11 @@ def callback(
     - memory: The memory service (runs directly)
 
     Examples:
-      cuga start demo           # Start both registry and demo agent directly
-      cuga start demo_crm       # Start CRM demo with all required services
-      cuga start registry       # Start registry only
-      cuga start appworld       # Start AppWorld servers
-      cuga start memory         # Start memory service
+      mirxa start demo           # Start both registry and demo agent directly
+      mirxa start demo_crm       # Start CRM demo with all required services
+      mirxa start registry       # Start registry only
+      mirxa start appworld       # Start AppWorld servers
+      mirxa start memory         # Start memory service
     """
     if verbose:
         logger.level("DEBUG")
@@ -511,7 +511,7 @@ def start(
     sample_memory_data: bool = typer.Option(
         False,
         "--sample-memory-data/--no-sample-memory-data",
-        help="For demo_crm: Generate sample workspace files (cities.txt, company.txt) in cuga_workspace",
+        help="For demo_crm: Generate sample workspace files (cities.txt, company.txt) in mirxa_workspace",
     ),
     no_email: bool = typer.Option(
         False,
@@ -550,7 +550,7 @@ def start(
             kill_processes_by_port([settings.server_ports.registry, settings.server_ports.demo])
 
             # Set environment variable for host
-            os.environ["CUGA_HOST"] = host
+            os.environ["MirxaAgent_HOST"] = host
 
             # If sandbox mode is enabled, update settings dynamically
             if sandbox:
@@ -648,14 +648,14 @@ def start(
 
     elif service == "demo_crm":
         try:
-            # Check if cuga_workspace folder exists
-            workspace_path = os.path.join(os.getcwd(), "cuga_workspace")
+            # Check if mirxa_workspace folder exists
+            workspace_path = os.path.join(os.getcwd(), "mirxa_workspace")
             if not os.path.exists(workspace_path):
-                logger.warning(f"📁 Creating cuga_workspace directory at {workspace_path}")
+                logger.warning(f"📁 Creating mirxa_workspace directory at {workspace_path}")
                 os.makedirs(workspace_path, exist_ok=True)
-                logger.info("✅ cuga_workspace directory created")
+                logger.info("✅ mirxa_workspace directory created")
             else:
-                logger.info(f"✅ cuga_workspace directory found at {workspace_path}")
+                logger.info(f"✅ mirxa_workspace directory found at {workspace_path}")
 
             if sample_memory_data:
                 logger.info("📝 Generating sample CRM workspace files...")
@@ -664,9 +664,9 @@ def start(
                     logger.info(f"   • {file_path}")
 
             # Set hardcoded policies for demo_crm
-            policies_content = "## Plan\nwhen using filesystem use the `./cuga_workspace` dir only\nwhen using crm make sure to go through all pages on queries that requires paginating all accounts etc\nwhen user asks questions about cuga then answer the question by first reading the filesystem information inside the file `./cuga_workspace/cuga_knowledge.md` then answer the question\nWhen user asks to use email templates assume it has <results> placehoder to replace with the results"
-            os.environ["CUGA_POLICIES_CONTENT"] = policies_content
-            os.environ["CUGA_LOAD_POLICIES"] = "true"
+            policies_content = "## Plan\nwhen using filesystem use the `./mirxa_workspace` dir only\nwhen using crm make sure to go through all pages on queries that requires paginating all accounts etc\nwhen user asks questions about cuga then answer the question by first reading the filesystem information inside the file `./mirxa_workspace/cuga_knowledge.md` then answer the question\nWhen user asks to use email templates assume it has <results> placehoder to replace with the results"
+            os.environ["MirxaAgent_POLICIES_CONTENT"] = policies_content
+            os.environ["MirxaAgent_LOAD_POLICIES"] = "true"
             logger.info("📋 Policies configured for demo_crm")
 
             # Set default CRM DB path with cwd if not already set
@@ -714,7 +714,7 @@ def start(
             kill_processes_by_port(ports_to_clean)
 
             # Set environment variable for host
-            os.environ["CUGA_HOST"] = host
+            os.environ["MirxaAgent_HOST"] = host
 
             # If sandbox mode is enabled, update settings dynamically
             if sandbox:

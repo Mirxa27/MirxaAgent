@@ -1,10 +1,10 @@
-# 📦 Embedded Assets for CUGA
+# 📦 Embedded Assets for MirxaAgent
 
-This document explains how to use embedded assets to create a standalone CUGA server without requiring external frontend files.
+This document explains how to use embedded assets to create a standalone MirxaAgent server without requiring external frontend files.
 
 ## 🎯 Overview
 
-CUGA can embed both the frontend (`dist` folder) and Chrome extension (`chrome-mv3` folder) as compressed base64 data directly in the Python code. This eliminates the need to distribute hundreds of separate files and creates a more portable application.
+MirxaAgent can embed both the frontend (`dist` folder) and Chrome extension (`chrome-mv3` folder) as compressed base64 data directly in the Python code. This eliminates the need to distribute hundreds of separate files and creates a more portable application.
 
 ## 🚀 Quick Start
 

@@ -1,7 +1,7 @@
 """
 CugaAgent Base Class
 
-Core CUGA agent that works with different tool providers through a unified interface.
+Core MirxaAgent agent that works with different tool providers through a unified interface.
 """
 
 import ast
@@ -118,7 +118,7 @@ class CombinedMetricsCallback(BaseCallbackHandler):
 
 class CugaAgent:
     """
-    Base CUGA agent that works with different tool providers.
+    Base MirxaAgent agent that works with different tool providers.
 
     This agent supports multiple tool interfaces:
     - ToolRegistryProvider: Tools from MCP registry (separate process)
@@ -895,7 +895,7 @@ async def call_api(app_name, api_name, args=None):
     if args is None:
         args = {{}}
 
-    # Registry URL from CUGA settings
+    # Registry URL from MirxaAgent settings
     url = "{registry_url}/functions/call"
 
     headers = {{

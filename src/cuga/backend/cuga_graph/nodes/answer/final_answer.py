@@ -103,7 +103,7 @@ class FinalAnswerNode(BaseNode):
             state.messages.append(AIMessage(content=final_answer_output.model_dump_json(), name=name))
             tracker.collect_step(step=Step(name=name, data=final_answer_output.model_dump_json()))
             return Command(update=state.model_dump(), goto=NodeNames.END)
-        if state.sender == NodeNames.CUGA_LITE:
+        if state.sender == NodeNames.MirxaAgent_LITE:
             state.sender = name
             state.final_answer = state.final_answer
             state.sender = name

@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2024 Gregor Zunic
- * Modifications Copyright 2025 CUGA
+ * Modifications Copyright 2025 MirxaAgent
  * Licensed under the Apache License, Version 2.0
  * Original code licensed under MIT License
  */
@@ -23,7 +23,7 @@ export class NodeElementCollector {
 
   public collect(element: HTMLElement): NodeData {
     // Ensure each element has a stable incrementing "dom-tree-id" attribute
-    const globalKey = "__CUGA_DOM_TREE_ID_COUNTER" as const;
+    const globalKey = "__MirxaAgent_DOM_TREE_ID_COUNTER" as const;
     let domTreeId: number;
     const existingIdAttr = element.getAttribute("dom-tree-id");
 

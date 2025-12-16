@@ -1,27 +1,27 @@
-# CUGA Knowledge Base
+# MirxaAgent Knowledge Base
 
-*A compact reference for agents answering questions about the CUGA framework.*
+*A compact reference for agents answering questions about the MirxaAgent framework.*
 
 ## Overview
 
-**CUGA (Configurable Generalist Agent)** is an open-source agent framework designed for enterprise workflows.
+**MirxaAgent (Configurable Generalist Agent)** is an open-source agent framework designed for enterprise workflows.
 It combines hybrid reasoning (API + web), tool orchestration, policy guardrails, memory, and configurable behavior patterns.
 
 **Why it exists:**
-Building robust domain-specific agents from scratch is expensive. CUGA provides a generalist core you configure with your own tools, APIs, policies, and workflows.
+Building robust domain-specific agents from scratch is expensive. MirxaAgent provides a generalist core you configure with your own tools, APIs, policies, and workflows.
 
 ---
 
 ## Core Concepts
 
-### What CUGA Is
+### What MirxaAgent Is
 
 * A **planner → executor** agent engine with code-generation capabilities.
 * A **configurable generalist**, not a domain-specific chatbot.
 * Designed for **enterprise reliability**, HITL support, and safe execution.
 * Modular: tools, policies, memory, and reasoning modes are all replaceable.
 
-### What CUGA Is Not
+### What MirxaAgent Is Not
 
 * Not a single-task bot.
 * Not tied to one model or one tool framework.
@@ -76,7 +76,7 @@ Holds intermediate results **outside** LLM context → allows large data without
 * Policy-aware planning
 * Saving successful plans or code snippets
 * Early memory layer for reuse
-* Exposure of CUGA itself as a tool to other agents
+* Exposure of MirxaAgent itself as a tool to other agents
 
 ---
 
@@ -114,9 +114,9 @@ Customize:
 
 ### Ecosystem Integrations
 
-* **Langflow**: low-code visual builder, CUGA block
+* **Langflow**: low-code visual builder, MirxaAgent block
 * **Hugging Face Spaces**: interactive demo
-* **Other agents**: CUGA can be exposed as a tool
+* **Other agents**: MirxaAgent can be exposed as a tool
 
 ---
 
@@ -129,7 +129,7 @@ Customize:
 
 ### Why It Matters
 
-These benchmarks validate CUGA’s:
+These benchmarks validate MirxaAgent’s:
 
 * generalization across real enterprise tasks
 * hybrid reasoning reliability
@@ -141,7 +141,7 @@ These benchmarks validate CUGA’s:
 
 ### Policy Layer
 
-CUGA enforces:
+MirxaAgent enforces:
 
 * Allowed/forbidden actions
 * Scope-of-intent classification
@@ -159,7 +159,7 @@ CUGA enforces:
 
 ## Memory
 
-### What CUGA Can Remember (Experimental)
+### What MirxaAgent Can Remember (Experimental)
 
 * Successful code snippets
 * Plans & execution traces

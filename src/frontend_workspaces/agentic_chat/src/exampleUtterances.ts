@@ -13,12 +13,12 @@ export const exampleUtterances: ExampleUtterance[] = [
     reason: "Iterative task execution with dynamic followup planning"
   },
   {
-    text: "./cuga_workspace/cuga_playbook.md",
-    reason: "Driving agent behavior from playbooks: learn how CUGA uses tools and variables in this demo"
+    text: "./mirxa_workspace/cuga_playbook.md",
+    reason: "Driving agent behavior from playbooks: learn how MirxaAgent uses tools and variables in this demo"
   },
   {
-    text: "What is CUGA?",
-    reason: "CUGA answers questions about itself from documentation"
+    text: "What is MirxaAgent?",
+    reason: "MirxaAgent answers questions about itself from documentation"
   }
 ];
 

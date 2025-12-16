@@ -217,9 +217,9 @@ async def lifespan(app: FastAPI):
     logger.info("Application is starting up...")
 
     # Load hardcoded policies if configured via environment variable
-    if os.getenv("CUGA_LOAD_POLICIES", "false").lower() in ("true", "1", "yes", "on"):
+    if os.getenv("MirxaAgent_LOAD_POLICIES", "false").lower() in ("true", "1", "yes", "on"):
         try:
-            policies_content = os.getenv("CUGA_POLICIES_CONTENT", "")
+            policies_content = os.getenv("MirxaAgent_POLICIES_CONTENT", "")
             if policies_content:
                 logger.info("Loading hardcoded policies")
                 instructions_manager = InstructionsManager()
@@ -271,7 +271,7 @@ async def lifespan(app: FastAPI):
 
     logger.info("Application finished starting up...")
     url = f"http://localhost:{settings.server_ports.demo}?t={random_id_with_timestamp()}"
-    if settings.advanced_features.mode == "api" and os.getenv("CUGA_TEST_ENV", "false").lower() not in (
+    if settings.advanced_features.mode == "api" and os.getenv("MirxaAgent_TEST_ENV", "false").lower() not in (
         "true",
         "1",
         "yes",
@@ -1213,7 +1213,7 @@ async def save_agent_mode_config(request: Request):
 async def get_workspace_tree():
     """Endpoint to retrieve the workspace folder tree."""
     try:
-        workspace_path = Path(os.getcwd()) / "cuga_workspace"
+        workspace_path = Path(os.getcwd()) / "mirxa_workspace"
 
         if not workspace_path.exists():
             workspace_path.mkdir(parents=True, exist_ok=True)
@@ -1253,10 +1253,10 @@ async def get_workspace_file(path: str):
     try:
         file_path = Path(path)
 
-        # Security check: ensure the path is within cuga_workspace
+        # Security check: ensure the path is within mirxa_workspace
         try:
             file_path = file_path.resolve()
-            workspace_path = (Path(os.getcwd()) / "cuga_workspace").resolve()
+            workspace_path = (Path(os.getcwd()) / "mirxa_workspace").resolve()
             file_path.relative_to(workspace_path)
         except (ValueError, RuntimeError):
             raise HTTPException(status_code=403, detail="Access denied: Path outside workspace")
@@ -1297,10 +1297,10 @@ async def download_workspace_file(path: str):
     try:
         file_path = Path(path)
 
-        # Security check: ensure the path is within cuga_workspace
+        # Security check: ensure the path is within mirxa_workspace
         try:
             file_path = file_path.resolve()
-            workspace_path = (Path(os.getcwd()) / "cuga_workspace").resolve()
+            workspace_path = (Path(os.getcwd()) / "mirxa_workspace").resolve()
             file_path.relative_to(workspace_path)
         except (ValueError, RuntimeError):
             raise HTTPException(status_code=403, detail="Access denied: Path outside workspace")
@@ -1328,10 +1328,10 @@ async def download_workspace_file(path: str):
 #     try:
 #         file_path = Path(path)
 #
-#         # Security check: ensure the path is within cuga_workspace
+#         # Security check: ensure the path is within mirxa_workspace
 #         try:
 #             file_path = file_path.resolve()
-#             workspace_path = (Path(os.getcwd()) / "cuga_workspace").resolve()
+#             workspace_path = (Path(os.getcwd()) / "mirxa_workspace").resolve()
 #             file_path.relative_to(workspace_path)
 #         except (ValueError, RuntimeError):
 #             raise HTTPException(status_code=403, detail="Access denied: Path outside workspace")
@@ -1360,7 +1360,7 @@ async def download_workspace_file(path: str):
 #     """Endpoint to upload a file to the workspace."""
 #     try:
 #         # Create workspace directory if it doesn't exist
-#         workspace_path = Path(os.getcwd()) / "cuga_workspace"
+#         workspace_path = Path(os.getcwd()) / "mirxa_workspace"
 #         workspace_path.mkdir(exist_ok=True)
 #
 #         # Sanitize filename and prevent directory traversal

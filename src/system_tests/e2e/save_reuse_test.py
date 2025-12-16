@@ -11,7 +11,7 @@ class TestServerStreamFast(BaseTestServerStream):
     Test class for FastAPI server's streaming endpoint in FAST mode.
     """
 
-    test_env_vars = {"DYNACONF_FEATURES__CUGA_MODE": "save_reuse_fast"}
+    test_env_vars = {"DYNACONF_FEATURES__MirxaAgent_MODE": "save_reuse_fast"}
 
     async def test_get_top_account_by_revenue_stream_fast(self):
         """

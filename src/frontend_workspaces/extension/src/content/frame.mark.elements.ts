@@ -50,7 +50,7 @@ export class FrameMarkElementsModule {
         this.exportToWindow();
         
         this.isInitialized = true;
-        console.log("CUGA Chrome Extension: Content script loaded and ready");
+        console.log("MirxaAgent Chrome Extension: Content script loaded and ready");
     }
 
     /**
@@ -489,7 +489,7 @@ export class FrameMarkElementsModule {
                     case "extract_dom_tree":
                         try {
                             // Use the DOM tree API that should be available globally
-                            const domTreeAPI = (window as any).DOMTreeAPI || (window as any).CUGA_DOMTreeAPI;
+                            const domTreeAPI = (window as any).DOMTreeAPI || (window as any).MirxaAgent_DOMTreeAPI;
                             if (!domTreeAPI) {
                                 throw new Error("DOM Tree API not available");
                             }
@@ -514,7 +514,7 @@ export class FrameMarkElementsModule {
                         break;
                         
                     case "server_disconnected":
-                        console.log("CUGA Chrome Extension: Server disconnected, removing element marks");
+                        console.log("MirxaAgent Chrome Extension: Server disconnected, removing element marks");
                         this.unmarkElements();
                         sendResponse({
                             type: "success"
@@ -536,7 +536,7 @@ export class FrameMarkElementsModule {
                     }
 
                     case "add_animation": {
-                        // Animation handler for CUGA
+                        // Animation handler for MirxaAgent
                         const injectAnimationStyles = () => {
                             const style = document.createElement('style');
                             style.id = 'ai-animation-styles';
@@ -673,7 +673,7 @@ export class FrameMarkElementsModule {
                             return { success: true };
                         };
 
-                        console.log("CUGA Chrome Extension: Adding animation to element", request.bid);
+                        console.log("MirxaAgent Chrome Extension: Adding animation to element", request.bid);
                         const { bid, iconType, bannerText } = request;
                         const result = addAnimationToElement(bid, iconType, bannerText);
                         sendResponse(result);
@@ -702,7 +702,7 @@ export class FrameMarkElementsModule {
      */
     private setupPageUnloadListener(): void {
         window.addEventListener('beforeunload', () => {
-            console.log("CUGA Chrome Extension: Page unloading, removing element marks");
+            console.log("MirxaAgent Chrome Extension: Page unloading, removing element marks");
             this.unmarkElements();
         });
     }

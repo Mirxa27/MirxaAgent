@@ -1,6 +1,6 @@
 {
-    "name": "CUGA",
-    "description": "CUGA is a generalist agent that can perform any task using web and api tools.",
+    "name": "MirxaAgent",
+    "description": "MirxaAgent is a generalist agent that can perform any task using web and api tools.",
     "version": "1.0.0",
     "manifest_version": 3,
     "minimum_chrome_version": "116",

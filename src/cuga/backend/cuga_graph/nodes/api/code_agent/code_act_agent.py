@@ -1,5 +1,5 @@
 # Copyright (c) 2025 LangChain
-# Modifications Copyright 2025 CUGA
+# Modifications Copyright 2025 MirxaAgent
 # Licensed under the MIT License
 
 import inspect
@@ -125,7 +125,7 @@ Answer "no" if the response:
 
 Examples that should return "yes" (auto-proceed):
 1. "To determine which users from contacts.txt belong to the CRM system, I will first read the contents of the contacts.txt file and then retrieve the list of contacts from the CRM system. After that, I'll compare the two lists to identify the users that belong to the CRM system.\n\nLet's start by reading the contacts.txt file."
-2. "To provide you with accurate information about CUGA, I'll read the contents of the file cuga_knowledge.md in the workspace. Let me do that now."
+2. "To provide you with accurate information about MirxaAgent, I'll read the contents of the file cuga_knowledge.md in the workspace. Let me do that now."
 3. "I'll read the playbook file to understand the process."
 
 Examples that should return "no" (needs user interaction):

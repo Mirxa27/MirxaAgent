@@ -14,9 +14,9 @@ class TestRestrictedExecution:
         """Create mock tool functions for testing."""
 
         async def mock_filesystem_read(path):
-            if path == './cuga_workspace/contacts.txt':
+            if path == './mirxa_workspace/contacts.txt':
                 return {'result': 'alice@example.com\nbob@example.com\ncharlie@example.com'}
-            elif path == './cuga_workspace/email_template.md':
+            elif path == './mirxa_workspace/email_template.md':
                 return {'result': 'Email Template:\n<results>'}
             return {'result': 'test data'}
 
@@ -73,7 +73,7 @@ class TestRestrictedExecution:
 
         valid_code = """
 # Read contacts
-contacts_data = await filesystem_read_text_file(path='./cuga_workspace/contacts.txt')
+contacts_data = await filesystem_read_text_file(path='./mirxa_workspace/contacts.txt')
 emails = contacts_data['result'].splitlines()
 
 # Get CRM contacts
@@ -307,7 +307,7 @@ files = list(path.iterdir())
 
         complex_code = """
 # Step 1: Read contacts
-contacts_file_path = './cuga_workspace/contacts.txt'
+contacts_file_path = './mirxa_workspace/contacts.txt'
 contacts_data = await filesystem_read_text_file(path=contacts_file_path)
 emails = contacts_data['result'].splitlines()
 
@@ -346,7 +346,7 @@ for contact in filtered_contacts:
         })
 
 # Step 7: Read template
-email_template_path = './cuga_workspace/email_template.md'
+email_template_path = './mirxa_workspace/email_template.md'
 email_template_data = await filesystem_read_text_file(path=email_template_path)
 email_template = email_template_data['result']
 
@@ -414,7 +414,7 @@ print(result)
 result = initial_value * multiplier
 
 # Call a tool from _locals
-contacts_data = await filesystem_read_text_file(path='./cuga_workspace/contacts.txt')
+contacts_data = await filesystem_read_text_file(path='./mirxa_workspace/contacts.txt')
 email_count = len(contacts_data['result'].splitlines())
 
 final_result = f"Calculation: {result}, Emails: {email_count}"
@@ -599,7 +599,7 @@ print(result)
 
         code = """
 # First tool call
-contacts = await filesystem_read_text_file(path='./cuga_workspace/contacts.txt')
+contacts = await filesystem_read_text_file(path='./mirxa_workspace/contacts.txt')
 contact_count = len(contacts['result'].splitlines())
 
 # Second tool call

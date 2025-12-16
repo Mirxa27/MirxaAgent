@@ -22,36 +22,36 @@ export function AdvancedTourButton({ onStartTour }: AdvancedTourButtonProps) {
   const welcomeTourSteps: TourStep[] = [
     {
       target: ".welcome-title",
-      title: "Welcome to CUGA!",
-      content: "CUGA is an intelligent digital agent that autonomously executes complex tasks through multi-agent orchestration, API integration, and code generation.",
+      title: "Welcome to MirxaAgent!",
+      content: "MirxaAgent is an intelligent digital agent that autonomously executes complex tasks through multi-agent orchestration, API integration, and code generation.",
       placement: "bottom",
       highlightPadding: 12,
     },
     {
       target: "#main-input_field",
       title: "Chat Input",
-      content: "Type your requests here. You can ask CUGA to manage contacts, read files, send emails, or perform any complex task.",
+      content: "Type your requests here. You can ask MirxaAgent to manage contacts, read files, send emails, or perform any complex task.",
       placement: "top",
       highlightPadding: 10,
     },
     {
       target: "#main-input_field",
       title: "File Tagging with @",
-      content: "Type @ followed by a file name to tag files in your message. This allows CUGA to access and work with specific files from your workspace.",
+      content: "Type @ followed by a file name to tag files in your message. This allows MirxaAgent to access and work with specific files from your workspace.",
       placement: "top",
       highlightPadding: 10,
     },
     {
       target: ".example-utterances-widget",
       title: "Try Example Queries",
-      content: "Click any of these example queries to get started quickly. These demonstrate the types of tasks CUGA can handle.",
+      content: "Click any of these example queries to get started quickly. These demonstrate the types of tasks MirxaAgent can handle.",
       placement: "top",
       highlightPadding: 12,
     },
     {
       target: ".welcome-features",
       title: "Key Features",
-      content: "CUGA offers multi-agent coordination, secure code execution, API integration, and smart memory to handle complex workflows.",
+      content: "MirxaAgent offers multi-agent coordination, secure code execution, API integration, and smart memory to handle complex workflows.",
       placement: "top",
       highlightPadding: 12,
     },
@@ -61,7 +61,7 @@ export function AdvancedTourButton({ onStartTour }: AdvancedTourButtonProps) {
     {
       target: ".workspace-toggle-btn, .workspace-panel",
       title: "Workspace Panel",
-      content: "This is the workspace panel. It shows all files in your workspace that CUGA can access and work with.",
+      content: "This is the workspace panel. It shows all files in your workspace that MirxaAgent can access and work with.",
       placement: "left",
       highlightPadding: 10,
       beforeShow: () => {
@@ -91,7 +91,7 @@ export function AdvancedTourButton({ onStartTour }: AdvancedTourButtonProps) {
     {
       target: ".workspace-panel",
       title: "Drag & Drop Upload",
-      content: "Drag and drop files directly into the workspace panel to upload them for CUGA to use.",
+      content: "Drag and drop files directly into the workspace panel to upload them for MirxaAgent to use.",
       placement: "left",
       highlightPadding: 12,
     },
@@ -101,14 +101,14 @@ export function AdvancedTourButton({ onStartTour }: AdvancedTourButtonProps) {
     {
       target: ".custom-chat-header",
       title: "Chat Header",
-      content: "See your active conversation with CUGA here. Use the restart button to begin a new conversation.",
+      content: "See your active conversation with MirxaAgent here. Use the restart button to begin a new conversation.",
       placement: "bottom",
       highlightPadding: 10,
     },
     {
       target: ".custom-chat-messages",
       title: "Agent Responses",
-      content: "CUGA's responses appear here, showing its reasoning, tool usage, and results in an interactive card format.",
+      content: "MirxaAgent's responses appear here, showing its reasoning, tool usage, and results in an interactive card format.",
       placement: "top",
       highlightPadding: 10,
     },
@@ -126,7 +126,7 @@ export function AdvancedTourButton({ onStartTour }: AdvancedTourButtonProps) {
     {
       target: ".left-sidebar, .sidebar-toggle-btn",
       title: "Conversations & Variables",
-      content: "Track your conversation history and view variables that CUGA has created or extracted during your interactions.",
+      content: "Track your conversation history and view variables that MirxaAgent has created or extracted during your interactions.",
       placement: "right",
       highlightPadding: 10,
       beforeShow: () => {
@@ -146,7 +146,7 @@ export function AdvancedTourButton({ onStartTour }: AdvancedTourButtonProps) {
     {
       target: ".chat-send-btn",
       title: "Ready to Start!",
-      content: "You're all set! Try sending a message to CUGA and see the magic happen. Remember to use @ to tag files and explore all the features.",
+      content: "You're all set! Try sending a message to MirxaAgent and see the magic happen. Remember to use @ to tag files and explore all the features.",
       placement: "top",
       highlightPadding: 10,
     },

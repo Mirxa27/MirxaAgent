@@ -746,7 +746,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
         <div className="custom-chat-header">
           <div className="chat-header-left">
             <Bot size={20} />
-            <span className="chat-header-title">CUGA Agent</span>
+            <span className="chat-header-title">MirxaAgent</span>
           </div>
           <button
             className="chat-restart-btn"
@@ -767,25 +767,25 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
               <div className="nav-brand">
                 <img
                   src="https://avatars.githubusercontent.com/u/230847519?s=100&v=4"
-                  alt="CUGA"
+                  alt="MirxaAgent"
                   className="nav-logo"
                 />
-                <span className="nav-brand-text">CUGA Agent</span>
+                <span className="nav-brand-text">MirxaAgent</span>
               </div>
               <nav className="nav-links">
-                <a href="https://docs.cuga.dev" target="_blank" rel="noopener noreferrer" className="nav-link">
+                <a href="https://docs.github.com/Mirxa27" target="_blank" rel="noopener noreferrer" className="nav-link">
                   Docs
                 </a>
-                <a href="https://cuga.dev" target="_blank" rel="noopener noreferrer" className="nav-link">
+                <a href="https://github.com/Mirxa27" target="_blank" rel="noopener noreferrer" className="nav-link">
                   Site
                 </a>
-                <a href="https://github.com/cuga-project/cuga-agent" target="_blank" rel="noopener noreferrer" className="nav-link">
+                <a href="https://github.com/Mirxa27/MirxaAgent" target="_blank" rel="noopener noreferrer" className="nav-link">
                   GitHub
                 </a>
                 <a href="https://discord.gg/UhNVTggG" target="_blank" rel="noopener noreferrer" className="nav-link">
                   Community
                 </a>
-                <a href="https://github.com/cuga-project/cuga-agent/issues/new" target="_blank" rel="noopener noreferrer" className="nav-link nav-link-feedback">
+                <a href="https://github.com/Mirxa27/MirxaAgent/issues/new" target="_blank" rel="noopener noreferrer" className="nav-link nav-link-feedback">
                   Give Feedback
                 </a>
               </nav>
@@ -796,7 +796,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
             <div className="welcome-left-column">
             <div className="welcome-content">
               <div className="welcome-header">
-                <h1 className="welcome-title">Experience CUGA Agent</h1>
+                <h1 className="welcome-title">Experience MirxaAgent</h1>
                 <p className="mission-text">
                   Intelligent task automation through multi-agent orchestration, API integration, and code generation on enterprise demo applications.
                 </p>
@@ -838,7 +838,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
                         <span className="demo-app-tag">Read File</span>
                       </div>
                       <p className="demo-app-description">
-                        Read files from the cuga_workspace directory
+                        Read files from the mirxa_workspace directory
                       </p>
                       
                       <div className="workspace-files-preview">
@@ -880,7 +880,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
             <div className="get-started-container">
               <div className="github-section-right">
                   <a
-                    href="https://github.com/cuga-project/cuga-agent"
+                    href="https://github.com/Mirxa27/MirxaAgent"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="github-button-sidebar"
@@ -922,7 +922,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
                   <div className="welcome-logo input-logo">
                     <img
                       src="https://avatars.githubusercontent.com/u/230847519?s=100&v=4"
-                      alt="CUGA Logo"
+                      alt="MirxaAgent Logo"
                       className="welcome-logo-image"
                     />
                   </div>
@@ -966,7 +966,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
           <div className="welcome-features-section">
             <div className="section-header">
               <h2 className="section-title">Key Capabilities</h2>
-              <p className="section-subtitle">Powerful features that make CUGA an intelligent automation platform</p>
+              <p className="section-subtitle">Powerful features that make MirxaAgent an intelligent automation platform</p>
             </div>
 
             <div className="welcome-features">
@@ -975,7 +975,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
                   <Bot size={32} />
                 </div>
                 <h3 className="feature-title">Multi-Agent System</h3>
-                <p className="feature-description">CUGA orchestrates specialized agents for planning, coding & execution</p>
+                <p className="feature-description">MirxaAgent orchestrates specialized agents for planning, coding & execution</p>
               </div>
 
               <div className="feature-card">
@@ -983,7 +983,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
                   <Terminal size={32} />
                 </div>
                 <h3 className="feature-title">Code Execution</h3>
-                <p className="feature-description">CUGA writes and runs Python code in secure sandbox</p>
+                <p className="feature-description">MirxaAgent writes and runs Python code in secure sandbox</p>
               </div>
 
               <div className="feature-card">
@@ -1007,7 +1007,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
                   <Cpu size={32} />
                 </div>
                 <h3 className="feature-title">Model Flexibility</h3>
-                <p className="feature-description">CUGA works with small models and open source models like GPT OSS 120B and Llama 4</p>
+                <p className="feature-description">MirxaAgent works with small models and open source models like GPT OSS 120B and Llama 4</p>
               </div>
 
               <div className="feature-card">
@@ -1015,7 +1015,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
                   <Globe size={32} />
                 </div>
                 <h3 className="feature-title">Web & API Tasks</h3>
-                <p className="feature-description">CUGA executes both web and API tasks seamlessly</p>
+                <p className="feature-description">MirxaAgent executes both web and API tasks seamlessly</p>
               </div>
 
               <div className="feature-card">
@@ -1079,7 +1079,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
               <div className="welcome-logo input-logo">
                 <img
                   src="https://avatars.githubusercontent.com/u/230847519?s=100&v=4"
-                  alt="CUGA Logo"
+                  alt="MirxaAgent Logo"
                   className="welcome-logo-image"
                 />
               </div>
@@ -1154,7 +1154,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
             <div className="welcome-features-section">
               <div className="section-header">
                 <h2 className="section-title">Key Capabilities</h2>
-                <p className="section-subtitle">Powerful features that make CUGA an intelligent automation platform</p>
+                <p className="section-subtitle">Powerful features that make MirxaAgent an intelligent automation platform</p>
               </div>
 
               <div className="welcome-features">
@@ -1163,7 +1163,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
                     <Bot size={32} />
                   </div>
                   <h3 className="feature-title">Multi-Agent System</h3>
-                  <p className="feature-description">CUGA orchestrates specialized agents for planning, coding & execution</p>
+                  <p className="feature-description">MirxaAgent orchestrates specialized agents for planning, coding & execution</p>
                 </div>
 
                 <div className="feature-card">
@@ -1171,7 +1171,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
                     <Terminal size={32} />
                   </div>
                   <h3 className="feature-title">Code Execution</h3>
-                  <p className="feature-description">CUGA writes and runs Python code in secure sandbox</p>
+                  <p className="feature-description">MirxaAgent writes and runs Python code in secure sandbox</p>
                 </div>
 
                 <div className="feature-card">
@@ -1187,7 +1187,7 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
                     <Database size={32} />
                   </div>
                   <h3 className="feature-title">Smart Memory</h3>
-                  <p className="feature-description">CUGA tracks variables and data across conversations</p>
+                  <p className="feature-description">MirxaAgent tracks variables and data across conversations</p>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build script to create CUGA with embedded assets (no external files needed).
+Build script to create MirxaAgent with embedded assets (no external files needed).
 This creates a version that doesn't require the frontend-workspaces folder.
 """
 
@@ -35,7 +35,7 @@ def build_and_embed():
 
     print("✅ Build completed successfully!")
     print("")
-    print("🎉 Your CUGA server now has embedded assets!")
+    print("🎉 Your MirxaAgent server now has embedded assets!")
     print("📁 Assets embedded in: cuga/backend/server/embedded_assets.py")
     print("💡 You can now run the server without the frontend_workspaces folder")
     print("🚀 Start server: uv run cuga/backend/server/main.py")

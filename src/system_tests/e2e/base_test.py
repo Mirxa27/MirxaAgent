@@ -38,7 +38,7 @@ SERVER_URL = f"http://localhost:{settings.server_ports.demo}"
 STREAM_ENDPOINT = f"{SERVER_URL}/stream"
 STOP_ENDPOINT = f"{SERVER_URL}/stop"
 os.environ["MCP_SERVERS_FILE"] = os.path.join(os.path.dirname(__file__), "config", "mcp_servers.yaml")
-os.environ["CUGA_TEST_ENV"] = "true"
+os.environ["MirxaAgent_TEST_ENV"] = "true"
 os.environ["DYNACONF_ADVANCED_FEATURES__TRACKER_ENABLED"] = "true"
 
 
@@ -141,7 +141,7 @@ class BaseTestServerStream(unittest.IsolatedAsyncioTestCase):
         # Create a unique folder for this specific test
         test_folder_name = f"{test_class_name}_{test_method_name}"
         self.test_log_dir = os.path.join(base_log_dir, test_folder_name)
-        os.environ["CUGA_LOGGING_DIR"] = os.path.join(self.test_log_dir, "logging")
+        os.environ["MirxaAgent_LOGGING_DIR"] = os.path.join(self.test_log_dir, "logging")
 
         # Remove existing test folder if it exists (to reset for rerun)
         if os.path.exists(self.test_log_dir):

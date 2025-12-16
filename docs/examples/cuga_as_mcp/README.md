@@ -1,10 +1,10 @@
-# CUGA as MCP Server
+# MirxaAgent as MCP Server
 
-This example demonstrates how to run CUGA (Computer Using Generalist Agent) as a Model Context Protocol (MCP) server, enabling it to be used as a tool by other applications.
+This example demonstrates how to run MirxaAgent (Computer Using Generalist Agent) as a Model Context Protocol (MCP) server, enabling it to be used as a tool by other applications.
 
-## What is CUGA?
+## What is MirxaAgent?
 
-CUGA is an autonomous AI agent that can:
+MirxaAgent is an autonomous AI agent that can:
 - 🤖 **Perform web actions** with intelligent planning
 - 🔗 **Connect to APIs** seamlessly  
 - 📱 **Automate repetitive tasks** on websites
@@ -13,13 +13,13 @@ CUGA is an autonomous AI agent that can:
 
 ## What is MCP?
 
-Model Context Protocol (MCP) is a standard that allows AI applications to expose their capabilities as tools that other applications can use. By running CUGA as an MCP server, you can integrate its powerful automation capabilities into other systems.
+Model Context Protocol (MCP) is a standard that allows AI applications to expose their capabilities as tools that other applications can use. By running MirxaAgent as an MCP server, you can integrate its powerful automation capabilities into other systems.
 
 ## How This Example Works
 
-This example creates an MCP server that exposes CUGA's task execution capabilities with multiple execution modes:
+This example creates an MCP server that exposes MirxaAgent's task execution capabilities with multiple execution modes:
 
-1. **Initializes CUGA Agent** - Sets up the core CUGA system
+1. **Initializes MirxaAgent** - Sets up the core MirxaAgent system
 2. **Configures Environment Variables** - Sets up MCP servers file and execution modes
 3. **Exposes Multiple Tools** - Provides three different execution modes:
    - `run_api_task` - API-only mode (headless, no GUI)
@@ -111,7 +111,7 @@ The server automatically configures the following environment variables:
 
 ## Requirements
 
-- CUGA backend running
+- MirxaAgent backend running
 - Digital Sales API accessible (if using API features)
 - Python 3.12+
 - Required dependencies installed
@@ -127,7 +127,7 @@ The server automatically configures the following environment variables:
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   MCP Client    │───▶│   CUGA MCP       │───▶│   CUGA Agent    │
+│   MCP Client    │───▶│   MirxaAgent MCP       │───▶│   MirxaAgent    │
 │                 │    │   Server         │    │                 │
 └─────────────────┘    └──────────────────┘    └─────────────────┘
                               │                          │

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-CUGA Demo Setup CLI
-A one-command solution to set up and run the CUGA Agent demo
+MirxaAgent Demo Setup CLI
+A one-command solution to set up and run the MirxaAgent demo
 """
 
 import os
@@ -67,7 +67,7 @@ def print_header():
 {Colors.BOLD}{Colors.OKCYAN}
 ╔═══════════════════════════════════════════════════════════╗
 ║                                                           ║
-║         🚀  CUGA Agent Demo Setup                        ║
+║         🚀  MirxaAgent Demo Setup                        ║
 ║                                                           ║
 ║         Setting up your agentic workflow environment     ║
 ║                                                           ║
@@ -199,7 +199,7 @@ def kill_process(pid: int) -> bool:
 
 def check_and_handle_ports(include_email: bool = False) -> bool:
     """Check if required ports are available and offer to kill processes if needed"""
-    required_ports = {8007: "CUGA Agent", 8111: "CRM MCP Server", 8112: "File System MCP Server"}
+    required_ports = {8007: "MirxaAgent", 8111: "CRM MCP Server", 8112: "File System MCP Server"}
     if include_email:
         required_ports.update({8000: "Email MCP Server", 1025: "Email SMTP Sink"})
 
@@ -215,7 +215,7 @@ def check_and_handle_ports(include_email: bool = False) -> bool:
 
     print(f"\n{Colors.BOLD}{Colors.WARNING}⚠️  Port Availability Check{Colors.ENDC}\n")
     print(f"{Colors.OKCYAN}This demo requires the following ports to be available:{Colors.ENDC}")
-    print(f"  • {Colors.BOLD}Port 8007{Colors.ENDC} - CUGA Agent")
+    print(f"  • {Colors.BOLD}Port 8007{Colors.ENDC} - MirxaAgent")
     print(f"  • {Colors.BOLD}Port 8111{Colors.ENDC} - CRM MCP Server")
     print(f"  • {Colors.BOLD}Port 8112{Colors.ENDC} - File System MCP Server\n")
 
@@ -321,7 +321,7 @@ def create_workspace(base_path: Optional[str] = None) -> Path:
     if base_path:
         workspace = Path(base_path).resolve()
     else:
-        workspace = Path.cwd() / "cuga_workspace"
+        workspace = Path.cwd() / "mirxa_workspace"
         workspace = workspace.resolve()
 
     try:
@@ -384,7 +384,7 @@ def start_filesystem_server(workspace: Path, no_cache: bool = False, local: bool
             cmd.append('--no-cache')
         cmd.extend([
             '--from',
-            'git+https://github.com/cuga-project/cuga-agent.git#subdirectory=docs/examples/demo_apps/file_system',
+            'git+https://github.com/Mirxa27/MirxaAgent.git#subdirectory=docs/examples/demo_apps/file_system',
             'filesystem-server',
             workspace_str,
         ])
@@ -440,7 +440,7 @@ def start_crm_server(no_cache: bool = False, local: bool = False, source_dir: Pa
             cmd.append('--no-cache')
         cmd.extend([
             '--from',
-            'git+https://github.com/cuga-project/cuga-agent.git#subdirectory=docs/examples/demo_apps/crm',
+            'git+https://github.com/Mirxa27/MirxaAgent.git#subdirectory=docs/examples/demo_apps/crm',
             'crm',
         ])
 
@@ -493,7 +493,7 @@ def start_email_sink(no_cache: bool = False, local: bool = False, source_dir: Pa
             cmd.append('--no-cache')
         cmd.extend([
             '--from',
-            'git+https://github.com/cuga-project/cuga-agent.git#subdirectory=docs/examples/demo_apps/email_mcp/mail_sink',
+            'git+https://github.com/Mirxa27/MirxaAgent.git#subdirectory=docs/examples/demo_apps/email_mcp/mail_sink',
             'email_sink',
         ])
 
@@ -547,7 +547,7 @@ def start_email_server(no_cache: bool = False, local: bool = False, source_dir: 
             cmd.append('--no-cache')
         cmd.extend([
             '--from',
-            'git+https://github.com/cuga-project/cuga-agent.git#subdirectory=docs/examples/demo_apps/email_mcp/mcp_server',
+            'git+https://github.com/Mirxa27/MirxaAgent.git#subdirectory=docs/examples/demo_apps/email_mcp/mcp_server',
             'email_mcp',
         ])
 
@@ -619,7 +619,7 @@ For the email application: send emails only using the local SMTP sink"""
 
 {Colors.BOLD}🔧 LangFlow Configuration:{Colors.ENDC}
 
-   {Colors.UNDERLINE}In your CUGA component 'policies' field, add:{Colors.ENDC}
+   {Colors.UNDERLINE}In your MirxaAgent component 'policies' field, add:{Colors.ENDC}
 
    {Colors.OKCYAN}{policy}{Colors.ENDC}
 
@@ -741,7 +741,7 @@ def main():
     print_header()
 
     # Parse command line arguments
-    parser = argparse.ArgumentParser(description='CUGA Demo Setup CLI')
+    parser = argparse.ArgumentParser(description='MirxaAgent Demo Setup CLI')
     parser.add_argument('--email', action='store_true', help='Include email MCP server and SMTP sink')
     parser.add_argument('--cache', action='store_true', help='Enable uv caching (default: disabled for fresh installations)')
     parser.add_argument('--local', action='store_true', help='Use local demo apps instead of git installs')
@@ -752,14 +752,14 @@ def main():
     args = parser.parse_args()
 
     # Check environment variable for local mode
-    if os.getenv('CUGA_LOCAL', '').lower() in ('1', 'true', 'yes'):
+    if os.getenv('MirxaAgent_LOCAL', '').lower() in ('1', 'true', 'yes'):
         args.local = True
 
     # Set the source directory for local mode
     if args.local:
         # When running from uvx temp directory, we need the original source path
-        if os.getenv('CUGA_SOURCE_DIR'):
-            args.source_dir = Path(os.getenv('CUGA_SOURCE_DIR'))
+        if os.getenv('MirxaAgent_SOURCE_DIR'):
+            args.source_dir = Path(os.getenv('MirxaAgent_SOURCE_DIR'))
         else:
             # Try to find it relative to current working directory
             potential_source = Path.cwd() / "docs" / "examples" / "demo_apps"

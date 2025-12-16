@@ -1,4 +1,4 @@
-## CUGA's Nodes
+## MirxaAgent's Nodes
 ---
 
 ### **ChatAgent | Chat**
@@ -82,4 +82,4 @@ This agent is responsible for gathering the results from all completed tasks and
 
 ### **ReuseAgent | Reuse Agent**
 
-This agent is used in "save & reuse" mode, where CUGA suggests that the user save the current autonomous flow into deterministic Python code for safer and more predictable execution. It runs after the **FinalAnswerAgent** in conjunction with human-in-the-loop actions.
+This agent is used in "save & reuse" mode, where MirxaAgent suggests that the user save the current autonomous flow into deterministic Python code for safer and more predictable execution. It runs after the **FinalAnswerAgent** in conjunction with human-in-the-loop actions.

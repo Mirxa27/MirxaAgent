@@ -1,4 +1,4 @@
-"""Unit tests for E2B sandbox integration in CUGA Lite mode."""
+"""Unit tests for E2B sandbox integration in MirxaAgent Lite mode."""
 
 import pytest
 from unittest.mock import patch

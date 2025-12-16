@@ -10,7 +10,7 @@ export default defineConfig({
 
     manifest: ({ mode }) => {
         return {
-            name: "CUGA",
+            name: "MirxaAgent",
             minimum_chrome_version: "116",
             icons: {
                 "16": "icon/16.png",

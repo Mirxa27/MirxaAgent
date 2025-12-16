@@ -55,7 +55,7 @@ declare global {
       hasStepWithTitle: (title: string) => boolean;
       showNextCardLoader?: (show: boolean) => void;
     };
-    CUGA_DEBUG_LOADERS?: boolean;
+    MirxaAgent_DEBUG_LOADERS?: boolean;
   }
 }
 
@@ -1255,7 +1255,7 @@ const CardManager: React.FC<CardManagerProps> = ({ chatInstance }) => {
               userSelect: "none",
             }}
           >
-            <span>CUGA is thinking..</span>
+            <span>MirxaAgent is thinking..</span>
           </div>
           <div
             style={{

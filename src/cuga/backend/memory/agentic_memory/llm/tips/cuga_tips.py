@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 async def extract_cuga_tips_from_data(data: Optional[dict]) -> Tuple[dict, Optional[str]]:
     """
-    Extract and store CUGA tips from trajectory data.
+    Extract and store MirxaAgent tips from trajectory data.
     Compatible with the existing API endpoint interface.
 
     Args:

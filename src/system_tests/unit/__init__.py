@@ -1,3 +1,3 @@
-# Unit tests for CUGA components
+# Unit tests for MirxaAgent components
 
 

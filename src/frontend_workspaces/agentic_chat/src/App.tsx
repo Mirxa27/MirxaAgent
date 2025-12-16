@@ -142,29 +142,29 @@ export function App() {
   const tourSteps: TourStep[] = [
     {
       target: ".welcome-title",
-      title: "Welcome to CUGA!",
-      content: "CUGA is an intelligent digital agent that autonomously executes complex tasks through multi-agent orchestration, API integration, and code generation.",
+      title: "Welcome to MirxaAgent!",
+      content: "MirxaAgent is an intelligent digital agent that autonomously executes complex tasks through multi-agent orchestration, API integration, and code generation.",
       placement: "bottom",
       highlightPadding: 12,
     },
     {
       target: "#main-input_field",
       title: "Chat Input",
-      content: "Type your requests here. You can ask CUGA to manage contacts, read files, send emails, or perform any complex task.",
+      content: "Type your requests here. You can ask MirxaAgent to manage contacts, read files, send emails, or perform any complex task.",
       placement: "top",
       highlightPadding: 10,
     },
     {
       target: "#main-input_field",
       title: "File Tagging with @",
-      content: "Type @ followed by a file name to tag files in your message. This allows CUGA to access and work with specific files from your workspace.",
+      content: "Type @ followed by a file name to tag files in your message. This allows MirxaAgent to access and work with specific files from your workspace.",
       placement: "top",
       highlightPadding: 10,
     },
     {
       target: ".example-utterances-widget",
       title: "Try Example Queries",
-      content: "Click any of these example queries to get started quickly. These demonstrate the types of tasks CUGA can handle.",
+      content: "Click any of these example queries to get started quickly. These demonstrate the types of tasks MirxaAgent can handle.",
       placement: "top",
       highlightPadding: 12,
       beforeShow: () => {
@@ -175,7 +175,7 @@ export function App() {
     {
       target: ".welcome-features",
       title: "Key Features",
-      content: "CUGA offers multi-agent coordination, secure code execution, API integration, and smart memory to handle complex workflows.",
+      content: "MirxaAgent offers multi-agent coordination, secure code execution, API integration, and smart memory to handle complex workflows.",
       placement: "top",
       highlightPadding: 12,
     },

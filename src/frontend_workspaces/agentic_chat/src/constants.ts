@@ -9,10 +9,10 @@ declare const process: {
 
 export const RESPONSE_USER_PROFILE = {
   id: "ai-chatbot-user",
-  userName: "CUGA",
-  fullName: "CUGA Agent",
-  displayName: "CUGA",
-  accountName: "CUGA Agent",
+  userName: "MirxaAgent",
+  fullName: "MirxaAgent",
+  displayName: "MirxaAgent",
+  accountName: "MirxaAgent",
   replyToId: "ai-chatbot-user",
   userType: UserType.BOT,
 };

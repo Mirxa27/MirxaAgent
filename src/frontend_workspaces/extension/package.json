@@ -1,7 +1,7 @@
 {
     "name": "extension",
     "version": "1.0.1",
-    "description": "CUGA is a generalist agent that can perform any task using web and api tools.",
+    "description": "MirxaAgent is a generalist agent that can perform any task using web and api tools.",
     "type": "module",
     "scripts": {
         "pretest": "npm run build",

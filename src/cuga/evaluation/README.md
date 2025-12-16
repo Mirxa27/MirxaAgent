@@ -1,7 +1,7 @@
 
-# **CUGA Evaluation**  
+# **MirxaAgent Evaluation**  
 
-An evaluation framework for **CUGA**, enabling you to **test your APIs** against structured test cases with detailed scoring and reporting.
+An evaluation framework for **MirxaAgent**, enabling you to **test your APIs** against structured test cases with detailed scoring and reporting.
 
 ---
 

@@ -1,5 +1,5 @@
 # Copyright 2024 ServiceNow
-# Modifications Copyright 2025 CUGA
+# Modifications Copyright 2025 MirxaAgent
 # Licensed under the Apache License, Version 2.0
 
 import playwright.async_api

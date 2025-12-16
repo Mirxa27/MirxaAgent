@@ -168,7 +168,7 @@ class DigitalSalesProfiler:
         """Create a test instance with specific configuration"""
         test_env_vars = {
             "AGENT_SETTING_CONFIG": config,
-            "DYNACONF_FEATURES__CUGA_MODE": mode,
+            "DYNACONF_FEATURES__MirxaAgent_MODE": mode,
             "DYNACONF_ADVANCED_FEATURES__LANGFUSE_TRACING": "true",
             # Treat MODEL_NAME like other envs: set or unset explicitly
             "MODEL_NAME": os.environ.get("MODEL_NAME"),

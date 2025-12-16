@@ -1,6 +1,6 @@
 # Authentication Tests
 
-This directory contains comprehensive tests for OpenAPI authentication in CUGA Agent's direct server integration.
+This directory contains comprehensive tests for OpenAPI authentication in MirxaAgent's direct server integration.
 
 ## Test Structure
 

@@ -46,7 +46,7 @@ async def perform_task(task: str) -> str:
 
 async def main():
     """Main entry point for the application."""
-    task = "Get top account by revenue from my accounts in digital sales, then send an email to the account owner, and save it to to file in my filesystem under cuga_workspace/email_sent.md"
+    task = "Get top account by revenue from my accounts in digital sales, then send an email to the account owner, and save it to to file in my filesystem under mirxa_workspace/email_sent.md"
     result = await perform_task(task)
     print(f"Task Result: {result}")
 

@@ -236,7 +236,7 @@ async def click_impl(
     # demo_mode: str = config.get("configurable", {}).get("demo_mode", "off")
 
     elem = await get_elem_by_bid_async(page, bid, True)
-    await add_animation(page, elem, "loading", "CUGA is clicking...")
+    await add_animation(page, elem, "loading", "MirxaAgent is clicking...")
 
     try:
         await elem.click(modifiers=modifiers, timeout=5000, force=True)
@@ -260,7 +260,7 @@ async def type_impl(
     demo_mode: str = config.get("configurable", {}).get("demo_mode", "off")
 
     elem = await get_elem_by_bid_async(page, bid, demo_mode != "off")
-    await add_animation(page, elem, "typing", "CUGA is typing...")
+    await add_animation(page, elem, "typing", "MirxaAgent is typing...")
 
     try:
         await elem.fill(value, timeout=1000)

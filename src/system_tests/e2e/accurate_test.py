@@ -9,7 +9,7 @@ class TestServerStreamAccurate(BaseTestServerStream):
     Test class for Cuga agent in ACCURATE mode.
     """
 
-    test_env_vars = {"DYNACONF_FEATURES__CUGA_MODE": "accurate"}
+    test_env_vars = {"DYNACONF_FEATURES__MirxaAgent_MODE": "accurate"}
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

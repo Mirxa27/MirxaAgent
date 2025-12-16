@@ -17,12 +17,12 @@ from loguru import logger
 # ---------------------------------------------------------------------------
 
 # Get the package root from path_store
-PACKAGE_ROOT = Path(os.environ.get("CUGA_PACKAGE_ROOT", Path(__file__).parent.resolve()))
-LOGGING_DIR = os.environ.get("CUGA_LOGGING_DIR", os.path.join(PACKAGE_ROOT, "./logging"))
+PACKAGE_ROOT = Path(os.environ.get("MirxaAgent_PACKAGE_ROOT", Path(__file__).parent.resolve()))
+LOGGING_DIR = os.environ.get("MirxaAgent_LOGGING_DIR", os.path.join(PACKAGE_ROOT, "./logging"))
 TRAJECTORY_DATA_DIR = os.path.join(LOGGING_DIR, "trajectory_data")
 TRACES_DIR = os.path.join(LOGGING_DIR, "traces")
 # Databases directory (sibling to logging)
-DBS_DIR = os.environ.get("CUGA_DBS_DIR", os.path.join(PACKAGE_ROOT, "./dbs"))
+DBS_DIR = os.environ.get("MirxaAgent_DBS_DIR", os.path.join(PACKAGE_ROOT, "./dbs"))
 # Define all path variables at the top (with environment variable overrides)
 ENV_FILE_PATH = os.getenv("ENV_FILE_PATH") or os.path.join(PACKAGE_ROOT, "..", "..", ".env")
 
@@ -47,7 +47,7 @@ def _find_config_file(filename: str, env_var_name: str) -> str:
 
 SETTINGS_TOML_PATH = _find_config_file("settings.toml", "SETTINGS_TOML_PATH")
 EVAL_CONFIG_TOML_PATH = _find_config_file("eval_config.toml", "EVAL_CONFIG_TOML_PATH")
-CONFIGURATIONS_DIR = os.environ.get("CUGA_CONFIGURATIONS_DIR", os.path.join(PACKAGE_ROOT, "configurations"))
+CONFIGURATIONS_DIR = os.environ.get("MirxaAgent_CONFIGURATIONS_DIR", os.path.join(PACKAGE_ROOT, "configurations"))
 MODELS_DIR = os.path.join(CONFIGURATIONS_DIR, "models")
 MODES_DIR = os.path.join(CONFIGURATIONS_DIR, "modes")
 MEMORY_DIR = os.path.join(CONFIGURATIONS_DIR, "memory")
@@ -170,7 +170,7 @@ if base_settings.advanced_features.enable_memory:
     logger.info(f"Memory tips extractor config path:   {tips_extractor_file_path}")
 
 # Fail fast with clear error if files are missing (helps especially on Windows)
-if os.getenv("CUGA_STRICT_CONFIG", "1") == "1":
+if os.getenv("MirxaAgent_STRICT_CONFIG", "1") == "1":
     if not os.path.isfile(models_file_path):
         raise FileNotFoundError(
             "Could not find models configuration file: "

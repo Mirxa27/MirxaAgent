@@ -9,7 +9,7 @@ class TestServerStreamBalanced(BaseTestServerStream):
     Test class for Cuga agent in BALANCED mode.
     """
 
-    test_env_vars = {"DYNACONF_FEATURES__CUGA_MODE": "balanced"}
+    test_env_vars = {"DYNACONF_FEATURES__MirxaAgent_MODE": "balanced"}
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

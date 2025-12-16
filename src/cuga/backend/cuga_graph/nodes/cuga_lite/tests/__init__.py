@@ -1,1 +1,1 @@
-"""Tests for CUGA Lite mode."""
+"""Tests for MirxaAgent Lite mode."""

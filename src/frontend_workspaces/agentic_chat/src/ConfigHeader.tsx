@@ -42,7 +42,7 @@ export function ConfigHeader({
     <div className="config-header">
       <div className="config-header-left">
         <Settings className="config-header-icon" />
-        <span className="config-header-title">CUGA Agent</span>
+        <span className="config-header-title">MirxaAgent</span>
       </div>
       <div className="config-header-buttons">
         {isMobile ? (

@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2024 Gregor Zunic
- * Modifications Copyright 2025 CUGA
+ * Modifications Copyright 2025 MirxaAgent
  * Licensed under the Apache License, Version 2.0
  * Original code licensed under MIT License
  */

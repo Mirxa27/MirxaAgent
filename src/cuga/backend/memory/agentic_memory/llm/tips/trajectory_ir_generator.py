@@ -2,7 +2,7 @@
 """
 Trajectory Intermediate Representation (IR) Generator
 
-Converts raw CUGA trajectory logs into structured IR format suitable for tips extraction.
+Converts raw MirxaAgent trajectory logs into structured IR format suitable for tips extraction.
 """
 
 import json

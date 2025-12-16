@@ -57,7 +57,7 @@ def embed_assets():
 
     # Generate Python code
     embedded_code = f'''"""
-Embedded assets for CUGA application.
+Embedded assets for MirxaAgent application.
 Generated automatically - do not edit manually.
 """
 

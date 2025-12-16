@@ -5,7 +5,7 @@ from cuga.backend.cuga_graph.nodes.cuga_lite.combined_tool_provider import Combi
 
 
 class CugaAgent(BaseCugaAgent):
-    """Fast CUGA agent that automatically loads tools from the registry.
+    """Fast MirxaAgent agent that automatically loads tools from the registry.
 
     This is a convenience wrapper around BaseCugaAgent that uses ToolRegistryProvider.
     It maintains the same interface as the original fast.py CugaAgent.

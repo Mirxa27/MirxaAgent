@@ -102,11 +102,11 @@ class TestCRMHF_Examples(BaseCRMTestServerStream):
 
     async def test_what_is_cuga(self):
         """
-        Test use case 3: Knowledge retrieval about CUGA from workspace documentation.
+        Test use case 3: Knowledge retrieval about MirxaAgent from workspace documentation.
         """
         print(f"Running test with thread ID: {self.thread_id}")
 
-        query = "What is CUGA?"
+        query = "What is MirxaAgent?"
 
         all_events = await self.run_task(query, thread_id=self.thread_id)
 
@@ -125,7 +125,7 @@ class TestCRMHF_Examples(BaseCRMTestServerStream):
         """
         print(f"Running test with thread ID: {self.thread_id}")
 
-        query = "./cuga_workspace/cuga_playbook.md"
+        query = "./mirxa_workspace/cuga_playbook.md"
 
         all_events = await self.run_task(query, thread_id=self.thread_id)
 

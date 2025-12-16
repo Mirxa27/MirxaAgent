@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tips Extractor for CUGA Agents
+Tips Extractor for MirxaAgents
 Analyzes trajectory outputs to generate specific tips for each agent based on failures and errors.
 Provides actionable guidance to prevent future failures.
 """
