@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc';
 import * as path from 'path';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode }: { mode: string }) => {
   const fakeStream = process.env.FAKE_STREAM === 'true';
   
   let options: ViteUserConfig = {
