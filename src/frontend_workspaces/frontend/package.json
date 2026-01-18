@@ -1,11 +1,11 @@
 {
-  "name": "@carbon/ai-chat-examples-web-components-basic",
-  "version": "0.0.0",
+  "name": "@mirza-agent/frontend",
+  "version": "0.2.6",
   "main": "main.js",
   "private": true,
   "type": "module",
   "proxy": "https://localhost:8000",
-  "description": "A basic example using @carbon/ai-chat as a web component.",
+  "description": "Mirza Agent - The Configurable Generalist Agent for Enterprise Task Automation",
   "scripts": {
     "start": "DANGEROUSLY_DISABLE_HOST_CHECK=true webpack serve --config ./webpack.config.js",
     "start:win": "set DANGEROUSLY_DISABLE_HOST_CHECK=true&& webpack serve --config ./webpack.config.js",
@@ -17,7 +17,7 @@
     "electron:build": "npm run build && electron-builder",
     "electron": "electron ."
   },
-  "author": "IBM Corp",
+  "author": "Mirza Agent Team",
   "license": "Apache-2.0",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "dependencies": {
