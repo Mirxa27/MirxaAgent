@@ -1,0 +1,9 @@
+# Mirza Agent - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mirza-agent.com/sitemap.xml
+
+# Crawl-delay for bots
+Crawl-delay: 1

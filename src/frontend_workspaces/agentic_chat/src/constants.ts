@@ -9,12 +9,21 @@ declare const process: {
 
 export const RESPONSE_USER_PROFILE = {
   id: "ai-chatbot-user",
-  userName: "MirxaAgent",
-  fullName: "MirxaAgent",
-  displayName: "MirxaAgent",
-  accountName: "MirxaAgent",
+  userName: "Mirza Agent",
+  fullName: "Mirza Agent",
+  displayName: "Mirza Agent",
+  accountName: "Mirza Agent",
   replyToId: "ai-chatbot-user",
   userType: UserType.BOT,
+};
+
+// Brand configuration
+export const BRAND_CONFIG = {
+  name: "Mirza Agent",
+  tagline: "The Configurable Generalist Agent - Built for Enterprise",
+  primaryColor: "#667eea",
+  secondaryColor: "#764ba2",
+  logoUrl: "https://avatars.githubusercontent.com/u/230847519?s=100&v=4",
 };
 
 // Get the base URL for the backend API

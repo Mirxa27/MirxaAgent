@@ -6,6 +6,7 @@ import { fetchStreamingData } from "./StreamingWorkflow";
 import { DebugPanel } from "./DebugPanel";
 import { FollowupSuggestions } from "./FollowupSuggestions";
 import { exampleUtterances } from "./exampleUtterances";
+import { BRAND_CONFIG } from "./constants";
 import "./CustomChat.css";
 
 interface Message {
@@ -766,11 +767,11 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
             <div className="nav-container">
               <div className="nav-brand">
                 <img
-                  src="https://avatars.githubusercontent.com/u/230847519?s=100&v=4"
-                  alt="MirxaAgent"
+                  src={BRAND_CONFIG.logoUrl}
+                  alt={BRAND_CONFIG.name}
                   className="nav-logo"
                 />
-                <span className="nav-brand-text">MirxaAgent</span>
+                <span className="nav-brand-text">{BRAND_CONFIG.name}</span>
               </div>
               <nav className="nav-links">
                 <a href="https://docs.github.com/Mirxa27" target="_blank" rel="noopener noreferrer" className="nav-link">
@@ -796,9 +797,9 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
             <div className="welcome-left-column">
             <div className="welcome-content">
               <div className="welcome-header">
-                <h1 className="welcome-title">Experience MirxaAgent</h1>
+                <h1 className="welcome-title">Experience {BRAND_CONFIG.name}</h1>
                 <p className="mission-text">
-                  Intelligent task automation through multi-agent orchestration, API integration, and code generation on enterprise demo applications.
+                  {BRAND_CONFIG.tagline}. Intelligent task automation through multi-agent orchestration, API integration, and code generation on enterprise demo applications.
                 </p>
               </div>
 
@@ -921,8 +922,8 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
                 {!hasStartedChat && (
                   <div className="welcome-logo input-logo">
                     <img
-                      src="https://avatars.githubusercontent.com/u/230847519?s=100&v=4"
-                      alt="MirxaAgent Logo"
+                      src={BRAND_CONFIG.logoUrl}
+                      alt={`${BRAND_CONFIG.name} Logo`}
                       className="welcome-logo-image"
                     />
                   </div>
@@ -1040,8 +1041,8 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
                   <User size={18} />
                 ) : (
                   <img 
-                    src="https://avatars.githubusercontent.com/u/230847519?s=48&v=4" 
-                    alt="Bot Avatar"
+                    src={BRAND_CONFIG.logoUrl} 
+                    alt={`${BRAND_CONFIG.name} Avatar`}
                     className="bot-avatar-image"
                   />
                 )}
@@ -1078,8 +1079,8 @@ export function CustomChat({ onVariablesUpdate, onFileAutocompleteOpen, onFileHo
             {!hasStartedChat && (
               <div className="welcome-logo input-logo">
                 <img
-                  src="https://avatars.githubusercontent.com/u/230847519?s=100&v=4"
-                  alt="MirxaAgent Logo"
+                  src={BRAND_CONFIG.logoUrl}
+                  alt={`${BRAND_CONFIG.name} Logo`}
                   className="welcome-logo-image"
                 />
               </div>
